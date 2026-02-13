@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Eugene">
+  <meta name="publisher" content="Grindhub Africa">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <title>GrindHub | PDF Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="pdfs.css" />
+  <script src="js/search.js"></script>
+  <script src="js/random.js"></script>
+  <script src="scroll-up.js" defer></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GrindHub</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pdfs.html">PDFs</a></li>
+        <li><a href="beats.html">Beats</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PDF Hub -->
+  <section class="pdf-hub">
+    <h2 class="center">📚 PDF Hub</h2>
+    <p class="center">Explore wisdom from all corners of the world</p>
+
+    <!-- Filter + Search -->
+ <div class="search-wrapper">
+    <div class="filter-bar">
+      <input type="text" id="search-input" placeholder="Search PDFs..." />
+    </div>
+  </div>
+  <div id="search-loading" style="display:none; text-align:center; margin:1rem;">
+   <div class="spinner"></div>
+  </div>
+  </section>
+  
+  <div class="category-scroll">
+  <button class="cat-tag" data-filter="all">📚 All</button>
+  
+  <a href="pdfs-educational.html" ><button class="cat-tag" data-filter="educational">🎓 Educational</button>
+  </a>
+  
+  <a href="pdfs-tech-&-programming.html"> <button class="cat-tag" data-filter="tech">💻Tech</button>
+  </a>
+  
+  <a href="pdfs-forex.html">
+  <button class="cat-tag" data-filter="forex">💹 Forex</button>
+  </a>
+  
+  <a href="pdfs-art.html">
+  <button class="cat-tag" data-filter="art">🎨Art</button>
+  </a>
+  
+  <a href="pdfs-mindset.html">
+  <button class="cat-tag" dat-filter="mindset">🧠 Mindset</button>
+  </a>
+  
+  <a href="pdfs-novels&stories.html">
+  <button class="cat-tag" data-filter="story">📖Novels & Stories</button>
+  </a>
+  
+  <a href="pdfs-romance.html">
+  <button class="cat-tag" data-filter="romance">❤️ Romance</button>
+  </a>
+  
+ <a href="pdfs-personalgrowth.html">
+  <button class="cat-tag" data-filter="growth">🚀 Personal growth & motivation</button>
+  </a>
+   
+  <a href="pdfs-lifestyle&skills.html">
+  <button class="cat-tag" data-filter="skills">🧳 Lifestyle & skills</button>
+  </a>
+  
+  <a href="pdfs-relationship.html">
+  <button class="cat-tag" data-filter="relationship">💞 Relationship</button>
+  </a>
+  
+  
+  <a href="pdfs-spiritual&religion.html">
+  <button class="cat-tag" data-filter="religious">🌏 Spiritual & Religion</button>
+  </a>
+  
+  <a href="pdfs-business&money.html">
+  <button class="cat-tag" data-filter="business">📈 Business & Money</button>
+  </a>
+  
+  <a href="pdfs-trading&economics.html">
+  <button class="cat-tag" data-filter="trading">📊 Trading & Economics</button>
+  </a>
+  
+  <a href="pdfs-digital&online-skills.html">
+  <button class="cat-tag" data-filter="digital">🌐 Digital Skills & Online Hustles</button>
+  </a>
+  
+  <a href="pdfs-tools&guides.html">
+  <button class="cat-tag" data-filt="tools">🔧Tools & Guides</button>
+  </a>
+  
+</div>
+
+ <div class="search-hub">
+   <div id="search-results">
+    
+   </div>
+ </div>
+
+  <!-- PDF Section -->
+<section class="pdf-section">
+  <div class="pdf-grid"> 
+ 
+    <div class="pdf-card with-bg" style="background-image: url('/img-tech-&-programming/solve-python-problems.webp');">
+      <div class="overlay">
+        <h3>Python</h3>
+        <p>Solve problems using a computer, give computer instructions.</p>
+        <a href="../data/book-details.html?id=python-problems" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg" style="background-image:  url('/img-romance/My-Dark-Romeo.webp');">
+      <div class="overlay">
+        <h3>My dark romeo</h3>
+        <p>my dark romeo by Parker S. Huntington and L.J. Shen.</p>
+        <a href="../data/book-details.html?id=dark-romeo" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-romance/twisted_games.webp');">
+      <div class="overlay">
+        <h3>Twisted games</h3>
+        <p>He can't have her. but he is taking her anyway .</p>
+        <a href="../data/book-details.html?id=twisted-games" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-romance/silence-banks.webp');">
+      <div class="overlay">
+        <h3>Banks silence</h3>
+        <p>silence by james banks.</p>
+        <a href="../data/book-details.html?id=banks-silence" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-tech-&-programming/tkinter-widget.webp');">
+      <div class="overlay">
+        <h3>Tkinter widget</h3>
+        <p>Tkinter quick reference guid.</p>
+        <a href="../data/book-details.html?id=tkinter-widget" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-tech-&-programming/kivy-interactive-apps.webp');">
+      <div class="overlay">
+        <h3>Kivy</h3>
+        <p>create responsive cross-platform application and games.</p>
+        <a href="../data/book-details.html?id=kivy-interactive" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/basic-engineering-maths.webp');">
+      <div class="overlay">
+        <h3>Engineer Maths</h3>
+        <p>Basics engineering mathematics.</p>
+        <a href="../data/book-details.html?id=engineer-maths" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-growth-&-motivation/the-gift-of-imperfection.webp');">
+      <div class="overlay">
+        <h3>The gifts of imperfection</h3>
+        <p>Embrace who you are.</p>
+        <a href="../data/book-details.html?id=imperfection" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-tech-&-programming/built-electronic-lab.webp');">
+      <div class="overlay">
+        <h3>Electronic lab</h3>
+        <p>A guide to setting up you own gadget Workshop.</p> 
+        <a href="../data/book-details.html?id=electronic-lab" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-spiritually-&-region/jesus-christ-detailed-potrait.webp');">
+      <div class="overlay">
+        <h3>The Tabernacle?</h3>
+        <p>A detailed portrait of jesus christ.</p>
+        <a href="../data/book-details.html?id=the-tabernacle" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/Chemistry-full-notes.webp');">
+      <div class="overlay">
+        <h3>Chemistry</h3>
+        <p>Chemistry full notes.</p>
+        <a href="../data/book-details.html?id=chemistry" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/essence-of-mathamatics.webp');">
+      <div class="overlay">
+        <h3>Essence of maths</h3>
+        <p>Essence of mathematics made ease.</p>
+        <a href="../data/book-details.html?id=maths-essence" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-ralationship/give-and-take.webp');">
+      <div class="overlay">
+        <h3>Give and Take</h3>
+        <p>A revolutionary approach to success by Adam grant.</p>
+        <a href="../data/book-details.html?id=give-and-take" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/Russell-Principles-of-Mathematics.webp');">
+      <div class="overlay">
+        <h3>Principles of mathematics</h3>
+        <p>Russell principles of mathematics.</p>
+        <a href="../data/book-details.html?id=principle-mathematics" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/concept-of-chemistry.webp');">
+      <div class="overlay">
+        <h3>chemistry concept</h3>
+        <p>Understand all concept of chemistry.</p>
+        <a href="../data/book-details.html?id=chemistry-concept" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-forex-trading/5-step-of-trading-gold-online-course.webp');">
+      <div class="overlay">
+        <h3>Gold traders</h3>
+        <p>5 steps of trading gold online course.</p>
+        <a href="../data/book-details.html?id=gold-trading" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-forex-trading/introduction-to-forex-trading.webp');">
+      <div class="overlay">
+        <h3>Intro to forex</h3>
+        <p>introduction to forex trading classic.</p>
+        <a href="../data/book-details.html?id=forex-classic" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-tech-&-programming/pygame-building.webp');">
+      <div class="overlay">
+        <h3>Pygame game engine</h3>
+        <p>Making games with python and pygame, by AI Sweigat.</p>
+        <a href="../data/book-details.html?id=pygame-building" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-romance/pale-stranger-mac-flynn-obooko.webp');">
+      <div class="overlay">
+        <h3>Pale stranger</h3>
+        <p>Pale series, book 1 by MAC FLYNN</p>
+        <a href="../data/book-details.html?id=Pale-stranger" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/advanced-mathematics.webp');">
+      <div class="overlay">
+        <h3>Advanced mathematics</h3>
+        <p>Advanced mathematics lecture notes.</p>
+        <a href="../data/book-details.html?id=advanced-mathematics" class="btn">View Details</a>
+      </div>
+    </div>
+  </div>
+        
+      <hr class="rule"/>
+      
+      <h3 class="center-flex">📗📙Stories & Novels</h3>
+      
+  <div class="scroll-wrapper">
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-novels-&-stories/The-Hunchback-of-Notre-Dame-Auhtor-Victor-Hugo.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>The Hunchback of Notre Dame</h3>
+        <p>The Hunchback of Notre Dame by Victor Hugo.</p>
+        <a href="../data/book-details.html?id=huncback" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-novels-&-stories/Treasure-Island-Author-Robert-Louis-Stevenson.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>TREASURE ISLAND</h3>
+        <p>Treasure island by Robert Louis stevenson.</p>
+        <a href="../data/book-details.html?id=treasure-island" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-novels-&-stories/the-land-that-time-forgot-edgar-rice-burroughs-948.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>The land that time forgot</h3>
+        <p>The land time forgot by Rice Burroughs.</p>
+        <a href="../data/book-details.html?id=forgotten-land" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-novels-&-stories/The-Call-of-the-Wild-Author-Jack-London.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>THE CALL OF  THE WILD</h3>
+        <p>The Call of the Wild by Jack London.</p>
+        <a href="../data/book-details.html?id=wild-call" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-novels-&-stories/the-adventures-of-tom-sawyer-mark-twain.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>THE ADVENTURES OF TOM SAWYER</h3>
+        <p>The Adventures of Tom Sawyer by Mark Twain.</p>
+        <a href="../data/book-details.html?id=tom-sawyer" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-novels-&-stories/wild-as-skin-other-balziala.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>WILD AS SKIN</h3>
+        <p>wild as skin by H. DE BALZAC.</p>
+        <a href="../data/book-details.html?id=wild-skin" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg view-more-card">
+      <div class="flex-overlay">
+        <h3>View More</h3>
+        <p>See more PDFs</p>
+        <a href="pdfs-novels&stories.html" class="btn-flex">
+        Explore More <span class="cycle-arrow">&#10145;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+      
+      <hr class="rule"/>
+     
+    <div class="pdf-grid">
+     <div class="pdf-card with-bg" style="background-image: url('/img-tools-&-guides/moving-avarage.webp');">
+      <div class="overlay">
+        <h3>Moving avarage</h3>
+        <p>algorithmic trading techniques.</p>
+        <a href="../data/book-details.html?id=moving-avarage" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-tech-&-programming/c-programming.webp');">
+      <div class="overlay">
+        <h3>C Programming language </h3>
+        <p>Introduction to C programming language.</p>
+        <a href="../data/book-details.html?id=c-programming" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/geography-notes.webp');">
+      <div class="overlay">
+        <h3>Geography</h3>
+        <p>Senior secondary geography notes 10 - 12</p>
+        <a href="../data/book-details.html?id=geography-notes" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-business-&-money/021.webp');">
+      <div class="overlay">
+        <h3>Zero to one</h3>
+        <p>Notes on start up or how to build the futur </p>
+        <a href="../data/book-details.html?id=021" class="btn">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card with-bg" style="background-image: url('/img-business-&-money/Business-Finance-net.webp');">
+      <div class="overlay">
+        <h3>Business finance net</h3>
+        <p>Snap shot for financial management</p>
+        <a href="../data/book-details.html?id=finance-net" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/Chemistry-starndard.webp');">
+      <div class="overlay">
+        <h3>Chemistry standard</h3>
+        <p>Chemistry standard first edition</p>
+        <a href="../data/book-details.html?id=chemistry-standard" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/BIOLOGY(BORNIFACE).webp');">
+      <div class="overlay">
+        <h3>Simply biology</h3>
+        <p>zase simply biology.</p>
+        <a href="../data/book-details.html?id=simply-biology" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-business-&-money/Business-Finance.webp');">
+      <div class="overlay">
+        <h3>Business Finance</h3>
+        <p>Management of businesses and finance.</p>
+        <a href="../data/book-details.html?id=bussiness-finance" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-business-&-money/Chapter-12-Money-and-Financial-Institutions.webp');">
+      <div class="overlay">
+        <h3>Money and Financial</h3>
+        <p>Money and Financial Institutions.</p>
+        <a href="../data/book-details.html?id=money-and-financial" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-romance/The-Invisible-Life.webp');">
+      <div class="overlay"> 
+        <h3>The invisible life</h3>
+        <p>The invisible life of addie larue.</p>
+        <a href="../data/book-details.html?id=invisible-life" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-lifestyle-&-skills/Your-mind-and-how-to-use-it-author-William-W-Atkinson.webp');">
+      <div class="overlay">
+        <h3>Your mind</h3>
+        <p>How to use you mind.</p>
+        <a href="../data/book-details.html?id=your-mind" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-lifestyle-&-skills/The-Secret-of-Success-William-Walker-Atkinson.webp');">
+      <div class="overlay">
+        <h3>The secret of success</h3>
+        <p>The secret of success by William Walker Atkinson</p>
+        <a href="../data/book-details.html?id=success-secret" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-lifestyle-&-skills/The-Science-of-Getting-Rich-author-Wallace-D.-Wattles.webp');">
+      <div class="overlay">
+        <h3>The science of getting rich</h3>
+        <p>The science of getting rich fy Wallance d. Wattles.</p>
+        <a href="../data/book-details.html?id=the-science-of-getting-rich" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-lifestyle-&-skills/The-Science-of-Being-Well-author-Wallace-D-Wattles.webp');">
+      <div class="overlay">
+        <h3>Being well science</h3>
+        <p>The science of being well.</p>
+       <a href="../data/book-details.html?id=well-science" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-business-&-money/the-psychology-of-money-by-morgan-housel.webp');">
+      <div class="overlay">
+        <h3>Money phycology</h3>
+        <p>The phycology of money.</p>
+        <a href="../data/book-details.html?id=money-phycology" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-business-&-money/trust-presentation.webp');"> 
+      <div class="overlay">
+        <h3>True presentation</h3>
+        <p>The true presentation.</p>
+        <a href="../data/book-details.html?id=true-presentation" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/English-Grade-10-12.webp');">
+      <div class="overlay">
+        <h3>English language</h3>
+        <p>English grade 10 to 12</p>
+        <a href="../data/book-details.html?id=english-10-12" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/ENGLISH-8-9.webp');">
+      <div class="overlay">
+        <h3>English language</h3>
+        <p>Grade 8 to 9 English language.</p>
+        <a href="../data/book-details.html?id=english-8-9" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/teaching-of-genetics.webp');"> 
+      <div class="overlay">
+        <h3>teaching of genetics</h3>
+        <p>teaching of genetics.</p>
+        <a href="../data/book-details.html?id=genetics-teaching" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-business-&-money/finance-bussiness.webp');">
+      <div class="overlay">
+        <h3>Business Finances</h3>
+        <p>Businesses Financials.</p>
+        <a href="../data/book-details.html?id=f-b" class="btn">View Details</a>
+      </div>
+    </div>
+      
+     <hr class="rule" />
+
+<h3 class="center-flex">📗📙 Educational</h3>
+
+  <div class="scroll-wrapper">
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-education-&-learning/agric-junior-notes-2.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>AGRICULTURE IN ZAMBIA</h3>
+        <p>GRADE 8-2018.</p>
+        <a href="../data/book-details.html?id=agric-in-zm" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-education-&-learning/MATHEMATICS-1-MODULE-FINAL.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>MATHEMATICS</h3>
+        <p>Mathematics 1 module final.</p>
+        <a href="../data/book-details.html?id=maths-1-module" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-education-&-learning/Physics-G10-12.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>PHYSICS SYLLABUS</h3>
+        <p>GRADES 10 – 12.</p>
+        <a href="../data/book-details.html?id=psg1012" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-education-&-learning/PRINCIPLES-OF-ACCOUNTS-TERM-2-MODULE.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>PRINCIPLES OF ACCOUNTS</h3>
+        <p>FORM 1 – TERM 2.</p>
+        <a href="../data/book-details.html?id=poa-f1-t2" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-education-&-learning/LITERATURE-IN-ENGLISH-Syllabus-10-12-1.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>LITERATURE IN ENGLISH</h3>
+        <p>Literature in English syllabus.</p>
+        <a href="../data/book-details.html?id=literature-in-english-sylla" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-education-&-learning/MATHEMATICS-O-LEVEL-FORMS-1-4.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>MATHEMATICS O-LEVEL</h3>
+        <p>Mathematics o-level form 1-4.</p>
+        <a href="../data/book-details.html?id=o-level-mathss" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg view-more-card">
+      <div class="flex-overlay">
+        <h3>View More</h3>
+        <p>See more PDFs</p>
+        <a href="pdfs-educational.html" class="btn-flex">
+        Explore More <span class="cycle-arrow">&#10145;</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+    <hr class="rule" />
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-forex-trading/basics-of-forex-trading.webp');">
+      <div class="overlay">
+        <h3>Forex trading</h3>
+        <p>Learn the basics of forex trading</p>
+        <a href="../data/book-details.html?id=forex-basics" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-lifestyle-&-skills/Handbook-on-Time-Management-Skills-CGG.webp');">
+      <div class="overlay">
+        <h3>The Handbook</h3>
+        <p>The handbook on time management skills.</p>
+        <a href="../data/book-details.html?id=handbook" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/basic-mathematic.webp');">
+      <div class="overlay">
+        <h3>Maths basics</h3>
+        <p>Simple mathematics basics.</p>
+        <a href="../data/book-details.html?id=basic-maths" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/biology-syllabus.webp');">
+      <div class="overlay">
+        <h3>Biology syllabus</h3>
+        <p>biology content 10 - 12.</p>
+        <a href="../data/book-details.html?id=biology-syllabus" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-business-&-money/Finance-for-business-guide.webp');">
+      <div class="overlay">
+        <h3>Business guide</h3>
+        <p>Financial for business guide.</p>
+        <a href="../data/book-details.html?id=financial" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/basic-mathematics.webp');">
+      <div class="overlay">
+        <h3>Basics maths</h3>
+        <p>Basics mathematics notes</p>
+        <a href="../data/book-details.html?id=maths-basics" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-business-&-money/Manage-Your-Business-Money-Facilitator.webp');">
+      <div class="overlay">
+        <h3>Management your business</h3>
+        <p>MANAGE YOUR BUSINESS MONEY FACILITATOR GUIDE.</p>
+        <a href="../data/book-details.html?id=manage-your-business" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-lifestyle-&-skills/Happiness-is-a-habit-author-Kris-Heap.webp');">
+      <div class="overlay">
+        <h3>Happiness</h3>
+        <p>Happiness is a habit.</p>
+        <a href="../data/book-details.html?id=happiness" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-lifestyle-&-skills/How-to-Practice-the-Art-of-Life-Balance-author-Stacey-Hoffer-Weckstein.webp');">
+      <div class="overlay">
+        <h3>Balancing life</h3>
+        <p>How to practice a life balance</p>
+        <a href="../data/book-details.html?id=life-balance" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/ENGLISH-LANGUEGE-2-7-SYLLABI.webp');">
+      <div class="overlay">
+        <h3>English language</h3>
+        <p>Grade 2 - 7 English language.</p>
+        <a href="../data/book-details.html?id=english-2-7" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-education-&-learning/zm-nbsap-v2-en.webp');">
+      <div class="overlay">
+        <h3>B.S</h3>
+        <p>Zm biodiversity strategy.</p>
+        <a href="../data/book-details.html?id=b-s" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-education-&-learning/just-the-maths.webp');">
+      <div class="overlay">
+        <h3>Just the maths</h3>
+        <p>Just the maths by A.J Hobson.</p>
+        <a href="../data/book-details.html?id=just-maths" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-forex-trading/boom-&-crash.webp');">
+      <div class="overlay">
+        <h3>Boom and Crash</h3>
+        <p>Model for makert booms and crashes.</p>
+        <a href="../data/book-details.html?id=boom-and-crash" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-business-&-money/money-and-business-cycle.webp');">
+      <div class="overlay">
+        <h3>Business Cycle</h3>
+        <p>Money and business cycle.</p>
+        <a href="../data/book-details.html?id=business-cycle" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-business-&-money/small-business-finance-101-ebook-invoiceberry.webp');">
+      <div class="overlay">
+        <h3>Small business</h3>
+        <p>Small business finance.</p>
+        <a href="../data/book-details.html?id=small-business" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-art&design/An-Introduction-to-19th-Century-Art.webp');">
+      <div class="overlay">
+        <h3>Nineteenth-Century Art</h3>
+        <p>An Introduction to Nineteenth-Century Art.</p>
+        <a href="../data/book-details.html?id=nineteenth-century-art" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-art&design/Catalogue-of-painting-sculpture.webp');">
+      <div class="overlay">
+        <h3>Catalogue of painting</h3>
+        <p>Catalogue of painting sculptures</p>
+        <a href="../data/book-details.html?id=sculpture-painting" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-art&design/history-of-art.webp');">
+      <div class="overlay">
+        <h3>history of art</h3>
+        <p>history of art by Henry Williams sage.</p>
+        <a href="../data/book-details.html?id=art-history" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-business-&-money/the-business-finance-guide.webp');">
+      <div class="overlay">
+        <h3>The business</h3>
+        <p>The business finance guide.</p>
+        <a href="../data/book-details.html?id=the-business" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-forex-trading/forex-basics-with-octa.webp');">
+      <div class="overlay">
+        <h3>Forex world</h3>
+        <p>forex trading with octa.</p>
+        <a href="../data/book-details.html?id=world-forex" class="btn">View Details</a>
+      </div>
+    </div>
+
+      <hr class="rule"/>
+      
+   <h3 class="center-flex">📚 Lifestyle and Skills</h3>
+      
+  <div class="scroll-wrapper">
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-lifestyle-&-skills/Handbook-on-Time-Management-Skills-CGG.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>The Handbook</h3>
+        <p>The handbook on time management skills.</p>
+        <a href="../data/book-details.html?id=handbook" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-lifestyle-&-skills/Your-mind-and-how-to-use-it-author-William-W-Atkinson.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>Your mind</h3>
+        <p>How to use you mind.</p>
+        <a href="../data/book-details.html?id=your-mind" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-lifestyle-&-skills/The-Secret-of-Success-William-Walker-Atkinson.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>The secret of success</h3>
+        <p>The secret of success by William Walker Atkinson.</p>
+        <a href="../data/book-details.html?id=success-secret" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-lifestyle-&-skills/The-Psychology-of-Salesmanship-author-William-W.-Atkinson.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>Salesmanship</h3>
+        <p>The Psychology of Salesmanship.</p>
+        <a href="../data/book-details.html?id=salesmanship" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-digital-&-online-hustle/Digital-Marketing-Strategy-Pierre-Yann-Dolbec.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>Digital marketing</h3>
+        <p>Digital marketing strategy guide.</p>
+        <a href="../data/book-details.html?id=digital-marketing" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg">
+      <img src="/img-digital-&-online-hustle/A-guide-to-payment-methods-Stripe.webp" alt="PDF Cover" class="cover-image" />
+      <div class="flex-overlay">
+        <h3>Payment method</h3>
+        <p>A guide to payment methods.</p>
+        <a href="../data/book-details.html?id=payment-method" class="btn-flex">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card-flex with-bg view-more-card">
+      <div class="flex-overlay">
+        <h3>View More</h3>
+        <p>See more PDFs</p>
+        <a href="pdfs-lifestyle&skills.html" class="btn-flex">
+        Explore More <span class="cycle-arrow">&#10145;</span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+      
+      <hr class="rule"/>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-forex-trading/forex-step-by-step-guide.webp');">
+      <div class="overlay">
+        <h3>step by step forex</h3>
+        <p>basics of forex step by step guid.</p>
+        <a href="../data/book-details.html?id=step-forex" class="btn">View Details</a>
+      </div>
+    </div>
+
+   <div class="pdf-card with-bg"style="background-image:  url('/img-lifestyle-&-skills/Little-Black-Book-For-Stunning-Success-author-Robin-Sharma.webp');">
+      <div class="overlay">
+        <h3>Stunning success</h3>
+        <p>little black book...</p>
+        <a href="../data/book-details.html?id=stunning-success" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-business-&-money/The-Entrepreneurs-Guide-to-Building-a-Successful-Business-2017.webp');">
+      <div class="overlay">
+        <h3>Entrepreneur's guide</h3>
+        <p>The Entrepreneur’s Guide.</p>
+        <a href="../data/book-details.html?id=entrepreneur" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-lifestyle-&-skills/Living-With-Purpose-a-Guide-for-Getting-More-Out-of-Each-Day-Natalie-Hundt-Maria-Armento-Jeffrey-Cully.webp');">
+      <div class="overlay">
+        <h3>Purpose life</h3>
+        <p>Living with purpose.</p>
+        <a href="../data/book-details.html?id=purpose-life" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-mindset-&-psychology/Book-Summary-Mindset.webp');">
+      <div class="overlay">
+        <h3>Summary Mindset</h3>
+        <p>The new phycology of success</p>
+        <a href="../data/book-details.html?id=summary-mindset" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-mindset-&-psychology/general-physiology.webp');">
+      <div class="overlay">
+        <h3>General physiology</h3>
+        <p>General physiology.</p>
+        <a href="../data/book-details.html?id=general-phycology" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-lifestyle-&-skills/personal_development_reader_v13_final_apr_28_2016.webp');">
+      <div class="overlay">
+        <h3>Personal development</h3>
+        <p>Personal development reader.</p>
+        <a href="../data/book-details.html?id=personal-development" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-lifestyle-&-skills/Personality-Development.webp');">
+      <div class="overlay">
+        <h3>Personality development</h3>
+        <p>Personality development by Swami Vivekananda.</p>
+        <a href="../data/book-details.html?id=personality-development" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-mindset-&-psychology/growth-mindset-policy-paper.webp');">
+      <div class="overlay">
+        <h3>Growth mindset</h3>
+        <p>Growth mindset thinking and teaching.</p>
+        <a href="../data/book-details.html?id=growth-mindset" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-mindset-&-psychology/growth-mindset-vs-fixed-mindset.webp');">
+      <div class="overlay">
+        <h3>GM vs FM</h3>
+        <p>Growth vs Mindset.</p>
+        <a href="../data/book-details.html?id=gm-fm" class="btn">View Details</a>
+      </div>
+    </div>
+    
+    <div class="pdf-card with-bg" style="background-image: url('/img-art&design/Principles-of-art-history.webp');">
+      <div class="overlay">
+        <h3>PRINCIPLES OF ART HISTORY</h3>
+        <p>The problem of the development of style in later art</p>
+        <a href="../data/book-details.html?id=art-principles" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-forex-trading/forex-trading-tutorial-point.webp');">
+      <div class="overlay">
+        <h3>World trading</h3>
+        <p>forex trading tutorial point.</p>
+        <a href="../data/book-details.html?id=forex-trading" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-romance/Afrikaans-love-fiction.webp');">
+      <div class="overlay">
+        <h3>Afrikaans love</h3>
+        <p>Afrikaans love fiction by Sophia kapp</p>
+        <a href="../data/book-details.html?id=afrikaans-love" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-romance/all-about-love.webp');">
+      <div class="overlay">
+        <h3>All about love</h3>
+        <p>all about love new vision bell books.</p>
+        <a href="../data/book-details.html?id=about-love" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-tech-&-programming/learn-html.webp');">
+      <div class="overlay">
+        <h3>HTML for beginners</h3>
+        <p>understand html(hyper text markup language).</p>
+        <a href="../data/book-details.html?id=html" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-forex-trading/forward-gold-trading.jpg');">
+      <div class="overlay">
+        <h3>Gold strategies</h3>
+        <p>A forward strategy to trading gold.</p>
+        <a href="../data/book-details.html?id=gold-strategy" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-art&design/The-art-of-figure-drawing.webp');">
+      <div class="overlay">
+        <h3>Figure drawing</h3>
+        <p>The art of figure drawing.</p>
+        <a href="../data/book-details.html?id=figure-drawing" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-romance/artemis-fowl-and the-atlantis-complex.webp');">
+      <div class="overlay">
+        <h3>The atlantis</h3>
+        <p>The atlantis complex by Eoin Colfer.</p>
+        <a href="../data/book-details.html?id=the-atlantis" class="btn">View Details</a>
+      </div>
+    </div>
+    
+     <div class="pdf-card with-bg" style="background-image: url('/img-romance/Female-Psychology-for-the-Practical-Man.webp');">
+      <div class="overlay">
+        <h3>Female psychology</h3>
+        <p>Practical female pychology</p>
+        <a href="../data/book-details.html?id=female-psychology" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pdf-card with-bg"style="background-image:  url('/img-lifestyle-&-skills/personally-development.webp');">
+      <div class="overlay">
+        <h3>Personally development</h3>
+        <p>A course in personally development..</p>
+        <a href="../data/book-details.html?id=personally-development" class="btn">View Details</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+    <p id="no-results">
+  ❌ No matching PDFs found.
+</p>
+
+  <!-- Pagination (Optional) -->
+  <div class="pagination">
+    <ul class="next-bar">
+      <li><a class="page-link active" href="#">1</a></li>
+      <li><a class="page-link" href="pdfs2.html">2</a></li>
+      <li><a class="page-link" href="pdfs3.html">3</a></li>
+      <li><a class="page-link" href="pdfs4.html">4</a></li>
+      <li><a class="page-link" href="pdfs5.html">5</a></li>
+    </ul>
+  </div>
+  
+  <div id="scrollTopBtn" class="scroll-top-btn">↑</div>
+  
+  <hr class="rule">
+
+  <!-- Footer -->
+  <footer class="book-footer">
+    <p>© 2026 GrindHub Africa | PDF Knowledge Center</p>
+    <p>Follow our <a class="terms-link" href="terms.html">terms and conditions</a></p>
+  </footer>
+
+</body>
+</html>

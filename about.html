@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Eugene">
+  <meta name="publisher" content="Grindhub Africa">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <title>About - GrindHub Africa</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+  
+  <header>
+    <nav class="navbar">
+      <div class="logo">GrindHub</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pdfs.html"><span class="nowrap">PDFs</span></a></li>
+        <li><a href="beats.html">Beats</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About GrindHub Africa</h1>
+    <h3>Welcome to GrindHub Africa!</h3>
+    
+    <p>We provide free, high
+     -quality resources designed 
+     to help you build real-world 
+     skills and sustainable side 
+     hustle, including:</p>
+    
+    <ul class="left">
+      <li>Carefully curated PDFs 
+          on Forex, trading 
+          strategies, business 
+          growth, and financial 
+          literacy</li>
+      <li>Insightful blog content   focused on mindset,
+          discipline, and smart 
+          execution</li>
+      <li>Original instrumental  
+          beats, created 
+          exclusively for the 
+          GrindHub Africa 
+          community</li>
+    </ul>
+    <p>OUR MISSION IS SIMPLE: to  
+       empower African talent with
+       knowledge, tools, and 
+       motivation to win in the 
+       modern digital economy.</p>
+
+    <h2>Get in Touch</h2>
+    <p>Have a question, idea, or  
+       collaboration in mind?
+       Leave us a message below 
+       and we’ll get back to you 
+       as soon as possible.</p>
+    <details class="form-collapse">
+    <summary>CONTACT US</summary>
+   <form id="contact-form" action="https://formspree.io/f/mwvkdoag" method="POST">
+     <label for="name">Your Name:</label><br>
+     <input type="text" name="name" id="name" placeholder="Name e.g Eugene" required><br><br>
+
+     <label for="email">Your Email:</label><br>
+     <input type="email" id="email" name="email" placeholder="your.email@example.com" required><br><br>
+
+     <label for="message">Message:</label><br>
+     <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br><br>
+
+     <button type="submit">Send</button>
+ </form>
+ </details>
+
+  </main>
+
+  <footer>
+    <p>© 2026 GrindHub Africa | Built by Eugene</p>
+   <p>
+    Follow our
+    <a class="terms-link" href="terms.html">terms and conditions</a> |
+   <a class="terms-link" href="privacy-policy.html">privacy policy</a>
+.</p>
+</footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // prevent default submission
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      window.location.href = 'thank-you.html'; // redirect to your page
+    } else {
+      alert('Oops! There was a problem submitting your form.');
+    }
+  });
+</script>
+
+</body>
+</html>

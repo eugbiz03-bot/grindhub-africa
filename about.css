@@ -1,0 +1,123 @@
+
+/* MAIN CONTENT */
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #173e2c;
+  border-radius: 15px;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  color: #00a651;
+  margin-bottom: 1rem;
+}
+
+p, li {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.left {
+  padding-left: 1.2rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+.form-collapse {
+  margin-top: 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #5E6F5C;
+}
+
+.form-collapse summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  color: #222;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-collapse summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Arrow */
+.form-collapse summary::after {
+  content: "＋";
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.form-collapse[open] summary::after {
+  content: "－";
+}
+
+.form-collapse > *:not(summary) {
+  margin-top: 14px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 2%;
+  width: 30%;
+  background-color: #00a651;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #009140;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  background: #001b11;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.terms-link {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.terms-link:active {
+  font-size: 0.85rem;
+  color: white;
+}
+
+.terms-link:visited {
+  color: #D2D5F2;
+}
+

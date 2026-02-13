@@ -1,0 +1,238 @@
+/* Local styles for search and filter */
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto;
+  width: 100%;
+} 
+
+#search-input {
+  padding: 0.6rem 1rem;
+  min-width: 300px;
+  max-width: 500px;
+  width: 80%;
+  background: #0e1b12;
+  border: 1px solid #00ffcc;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffcc;
+  font-size: 1rem;
+  text-align: center; /* This aligns the text inside */
+  transition: 0.3s ease;
+}
+
+#search-input::placeholder {
+  color: #00ffcc;
+  text-shadow: 0 0 4px #00ffcc;
+}
+
+
+.pdf-hub {
+  padding: 2rem;
+  background-color: #0e1b12;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.next-bar {
+  list-style: none;
+  display: inline-flex;
+  gap: 1rem;
+  padding: 0;
+  justify-content: center;
+}
+
+.page-link {
+  background: #00a651;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.page-link:hover {
+  background: #007f3a;
+}
+
+.page-link.active {
+  background-color: #00ff99;
+  color: #0e1b12;
+  font-weight: bold;
+  border: 1px solid white;
+  box-shadow: 0 0 5px white;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.category-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.7rem;
+  padding: 1rem 0.5rem;
+  margin-top: 1rem;
+  border-top: 1px solid #256659;
+  border-bottom: 1px solid #256659;
+  background: #0f1a1a;
+  scroll-behavior: smooth;
+}
+
+.cat-tag {
+  flex: 0 0 auto;
+  background: #173e2c;
+  color: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.cat-tag:hover,
+.cat-tag.active {
+  background: #256659;
+}
+
+#no-results { 
+  display: none;
+  text-align: center;
+  color: #ccc; 
+  margin-top: 0.5rem;
+}
+
+
+/* || view more stt */
+
+.view-more-card {
+  background: linear-gradient(135deg, #76B96D, #118301);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-radius: 12px;
+}
+
+.view-more-card .flex-overlay {
+  padding: 2rem;
+  
+}
+
+.view-more-card h3,
+.view-more-card p {
+  margin: 6px 0;
+  color: #fff;
+}
+
+.view-more-card .btn-flex {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-more-card .btn-flex:hover {
+  background: rgba(151, 186, 143, 1);
+}
+
+.arrow-right {
+  font-size: 18px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-flex:hover .arrow-right {
+  font-size: 2rem;
+}
+
+/* search results*/
+
+#search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.search-hub {
+  text-align: center;
+  padding: 1.2rem;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 255, 204, 0.2);
+  border-top: 4px solid #00ffcc;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.book-card:hover {
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    background: #00c26e;
+    color: white;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 140, 0.7);
+    z-index: 9999;
+    transition: 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.view-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #00ffcc;
+  text-decoration: underline;
+}
+
+.no-result {
+  text-align: center;
+  color: #ccc;
+}

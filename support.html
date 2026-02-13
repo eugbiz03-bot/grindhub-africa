@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Eugene">
+  <meta name="publisher" content="Grindhub Africa">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <title>SUPPORT GRINDHUB AFRICA</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="support.css">
+</head>
+
+<body>
+  <section class="support-section">
+    <div class="support-container">
+        <h1>Support the Platform ☕</h1>
+        <p class="intro">
+            This platform is built with passion, late nights, and a dream to keep learning free.
+            If you find value in our work, consider buying us a coffee. Every contribution helps us grow.
+        </p>
+
+        <div class="support-cards">
+
+            <!-- Coffee Option 1 -->
+            <div class="card">
+                <h2>☕ 1 Coffee</h2>
+                <p class="price">$1</p>
+                <p>A small boost to keep the energy flowing.</p>
+                <div id="paypal-button-1"></div>
+            </div>
+
+            <!-- Coffee Option 2 -->
+            <div class="card">
+                <h2>☕☕ 2 Coffees</h2>
+                <p class="price">$2.50</p>
+                <p>Helps cover hosting & development tools.</p>
+                <div id="paypal-button-2"></div>
+            </div>
+
+            <!-- Custom Amount -->
+            <div class="card">
+                <h2>🚀 Custom Support</h2>
+                <p class="price">Choose any amount</p>
+                <p>Every contribution pushes us forward.</p>
+                <div id="paypal-button-custom"></div>
+            </div>
+        </div>
+
+        <div class="where-goes">
+            <h3>Where Your Support Goes</h3>
+            <ul>
+                <li>Hosting & domain</li>
+                <li>Improving download speed</li>
+                <li>Adding new features</li>
+                <li>Building premium tools</li>
+                <li>Supporting free learning</li>
+            </ul>
+        </div>
+
+        <p class="footer-note">Your support is securely processed. Thank you for believing in this journey.</p>
+    </div>
+</section>
+  
+  <script src="https://www.paypal.com/sdk/js?client-id=AXrdCiUwPRw-PiiT_QF1a-TFVZAzFTu2njrVZSPBxw1gSg5RpnYfFSBz0j44L-vUgPW2wt7QiynNA43X&currency=USD"></script>
+
+<script>
+  // $1 Coffee
+  paypal.Buttons({
+    createOrder: function (data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: { value: "1.00" }
+        }]
+      });
+    },
+    onApprove: function (data, actions) {
+      return actions.order.capture().then(function () {
+        alert("Thank you for buying us a coffee ☕");
+      });
+    }
+  }).render('#paypal-button-1');
+
+  // $2.50 Coffee
+  paypal.Buttons({
+    createOrder: function (data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: { value: "2.50" }
+        }]
+      });
+    },
+    onApprove: function (data, actions) {
+      return actions.order.capture().then(function () {
+        alert("Thank you for supporting GrindHub Africa 🚀");
+      });
+    }
+  }).render('#paypal-button-2');
+
+  // Custom Amount
+  paypal.Buttons({
+    createOrder: function (data, actions) {
+      const amount = prompt("Enter amount in USD:");
+      if (!amount || isNaN(amount)) {
+        alert("Invalid amount");
+        return;
+      }
+      return actions.order.create({
+        purchase_units: [{
+          amount: { value: amount }
+        }]
+      });
+    },
+    onApprove: function (data, actions) {
+      return actions.order.capture().then(function () {
+        alert("Massive thanks for your support ❤️");
+      });
+    }
+  }).render('#paypal-button-custom');
+</script>
+
+</body>
+</html>

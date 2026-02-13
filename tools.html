@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Eugene">
+  <meta name="publisher" content="Grindhub Africa">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <title>GrindHub | Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="tools.css"
+  <script src="tools.js"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GrindHub</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pdfs.html">PDFs</a></li>
+        <li><a href="beats.html">Beats</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Tools Page -->
+  <section class="tool-section">
+    <h2 style="text-align: center; margin-bottom: 2rem;">⚙️ Trading & Hustle Tools</h2>
+
+    <!-- Risk Calculator -->
+    <div class="tool-card">
+      <h3>Risk Calculator (USD)</h3>
+      <input type="number" id="accountBalance" placeholder="Account Balance ($)" />
+      <input type="number" id="riskPercent" placeholder="Risk % (e.g. 2)" />
+      <button onclick="calculateRisk()">Calculate</button>
+      <div class="result" id="riskResult"></div>
+    </div>
+
+    <!-- Motivation Generator -->
+    <div class="tool-card">
+      <h3>🔥 Motivation Generator</h3>
+      <button onclick="generateQuote()">Get Motivation</button>
+      <div class="result" id="quoteResult"></div>
+    </div>
+
+    <!-- Lot Size Formula (Visual) -->
+    <div class="tool-card">
+      <h3>📏 Lot Size Formula</h3>
+      <p>Lot Size = (Account Balance × Risk %) / Stop Loss</p>
+      <p>Example: (100 × 2%) / 20 = 0.1 lots</p>
+    </div>
+  </section>
+  
+  <hr class="rule"> 
+
+  <footer>
+    <p style="text-align: center;">© 2026 GrindHub Africa | Tools Page</p>
+  </footer>
+
+</body>
+</html>

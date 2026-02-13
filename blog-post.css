@@ -1,0 +1,145 @@
+.blog-section{
+  background: #117519;
+  color: whitesmoke;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-style: bold;
+  text-align: center ;
+}
+
+.blog-post-container {
+  padding: 1rem 1rem;
+  max-width: 750px;
+  margin: auto;
+}
+
+.blog-post {
+  background: #012204;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  line-height: 1.7;
+}
+
+.blog-post h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.left {
+  padding-left: 2rem;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.post-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post h2 {
+  margin-top: 2rem;
+  color: #00ff9f;
+}
+
+.signature {
+  margin-top: 2rem;
+  font-style: italic;
+  text-align: right;
+}
+
+.affiliate-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #007BFF, #00C6FF);
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.affiliate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.story-image {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.story-image figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    color: #A6B2A8;
+    font-style: italic;
+}
+
+.story-image figcaption {
+  background: #031C07;
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #00ff9f;
+  text-decoration: underline;
+}
+
+.link {
+  color: #97E58E;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+ /* Custom banner styles */
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  margin: 1rem auto 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.banner img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+      height: 250px;
+}
+.banner-text {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  color: #00ff9f;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0,255,159,0.9);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  background: #001b11;
+  color: #ccc;
+  font-size: 0.9rem;
+}

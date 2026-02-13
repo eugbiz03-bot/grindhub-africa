@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You – GrindHub Africa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Eugene">
+  <meta name="publisher" content="Grindhub Africa">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    .thank-you-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 40px 30px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      animation: popIn 1s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      animation: fadeDown 1s ease forwards;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 8px 0;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    p:nth-of-type(1) {
+      animation-delay: 0.4s;
+    }
+
+    p:nth-of-type(2) {
+      animation-delay: 0.7s;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      color: #e0f7ff;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 26px;
+      border-radius: 30px;
+      background: #00c6ff;
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 198, 255, 0.4);
+    }
+
+    /* Animations */
+    @keyframes popIn {
+      from {
+        transform: scale(0.85);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="thank-you-box">
+    <h1>Thank You 🌟</h1>
+
+    <p>Your message has been sent successfully.</p>
+    <p>We’ll get back to you shortly.</p>
+
+    <p class="note">
+      At <strong>GrindHub Africa</strong>, we value every connection.  
+      Your support means more than you know.
+    </p>
+
+    <a href="index.html">Back to Home</a>
+  </div>
+
+</body>
+</html>

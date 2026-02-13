@@ -1,0 +1,203 @@
+body {
+  background: #0f1a1a;
+  font-family: 'Poppins', sans-serif;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #173e2c;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto;
+  width: 100%;
+} 
+
+#search-input {
+  padding: 0.6rem 1rem;
+  min-width: 300px;
+  max-width: 500px;
+  width: 80%;
+  background: #0e1b12;
+  border: 1px solid #00ffcc;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffcc;
+  font-size: 1rem;
+  text-align: center; /* This aligns the text inside */
+  transition: 0.3s ease;
+}
+
+#search-input::placeholder {
+  color: #00ffcc;
+  text-shadow: 0 0 4px #00ffcc;
+}
+
+.section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.pdf-category-card-with-bg {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #00ffcc;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 46, 16, 0.5); /* Opacity applied */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  scscroll-snap-align: start;
+}
+
+.category-overlay h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #00ffd1;
+}
+
+.category-overlay p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #ADFF00;
+  font-size: 0.9rem;
+}
+
+.category-btn {
+  background: #256659;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 13px;
+  border-radius: 5px;
+  opacity: 90%;
+  border: 1px solid rgba(18, 206, 18, 1);
+}
+
+#no-results {
+  display: none;
+  text-align: center ;
+}
+
+/*|| Scroll settings*/
+
+.scroll-wrapper1 {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.pdf-card-flex1 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 150px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  border: 1px solid #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+  color: white;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.flex-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(23, 62, 44, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.flex-overlay h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #00ffd1;
+}
+
+.flex-overlay p {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: #6EFF01;
+  line-height: 1.2rem;
+}
+
+.category-btn-flex {
+  background: #18752b;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.flex-overlay::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* || rules for zm */
+.main {
+  background: radial-gradient(#5E7857, #0F3211);
+}
+
+.special {
+    background: #1F3526;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem;
+  background: #001b11;
+  color: #ccc;
+  font-size: 0.9rem;
+}

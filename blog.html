@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Eugene">
+  <meta name="publisher" content="Grindhub Africa">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <title>GrindBlog | Hustle Stories & Wisdom</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="main.css"/>
+  <script src="scroll-up.js" defer></script>
+  <link rel="stylesheet" href="blog.css"/>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav class="navbar">
+    <div class="logo">GrindHub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pdfs.html">PDFs</a></li>
+      <li><a href="beats.html">Beats</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Blog Hero -->
+<section class="blog-hero">
+  <h1>📝 GrindBlog</h1>
+  <p>Stories, wisdom & hustle tips from the street to success.</p>
+</section>
+
+<!-- Featured Post -->
+<section class="blog-featured">
+  <h2>🔥 Featured</h2>
+  <div class="featured-post">
+    <img src="../img/5-habits-of-profitable-trader.webp" alt="Featured Post" width="" height="" loading="lazy" />
+    <div class="featured-text">
+      <h3>5 Habits of Profitable Traders</h3>
+      <p>What separates consistent winners from the rest? Let’s break it down...</p>
+      <a href="blogs/5-habits-of-profitable-trader.html">Read More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Categories -->
+<section class="blog-categories">
+  <button class="filter-btn" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="trading">Trading</button>
+  <button class="filter-btn" data-filter="tech">Tech</button>
+  <button class="filter-btn" data-filter="mindset">Mindset</button>
+</section>
+
+<!-- Blog Posts -->
+<section class="blog-list" id="blogList">
+
+  <div class="blog-card" data-category="trading">
+    <img src="img/why-most-traders-fail.webp" alt="Trader" loading="lazy"/>
+    <h3>Why Most Traders Fail</h3>
+    <p>It’s not just about strategy — mindset and emotions matter more than charts...</p>
+    <a href="blogs/why-most-traders-fail.html">Read More</a>
+  </div>
+
+  <div class="blog-card" data-category="tech">
+    <img src="img/AI-in-forex.webp" alt="AI" width="" height="250" loading="lazy"/>
+    <h3>AI is Taking Over — Can It Beat Forex?</h3>
+    <p>We explore how AI tools are changing the way we analyze trades...</p>
+    <a href="blogs/AI-in-forex.html">Read More</a>
+  </div>
+
+  <div class="blog-card" data-category="mindset">
+    <img src="img/I-almost-quite-but-this-saved-me.webp" alt="I almost quite but this saved me" />
+    <h3>I Almost Quit — But This Saved Me</h3>
+    <p>This one thing gave me the mental strength to keep going...</p>
+    <a href="blogs/I-almost-quite-but-this-saved-me.html">Read More</a>
+  </div>
+  
+  <div class="blog-card" data-category="forex">
+    <img src="/img/global-map-with-currency-symbols.webp" alt="Global map with currency symbols" />
+    <h3>Introduction to Forex Trading Basics: A Beginner’s Guide to the World’s Largest Market.</h3>
+    <p>Forex trading, also known as foreign exchange trading, is the process of buying one currency and selling another in order...</p>
+    <a href="blogs/introduction-to-forex.html">Read More</a>
+  </div>
+  
+<!-- TECH -->
+<div class="blog-card" data-category="tech">
+  <img src="../img/phone-coding-apps.webp" alt="Coding on Phone" width="" height="250" loading="lazy"/>
+  <h3>Best Code Editors for Mobile (2026)</h3>
+  <p>I built this entire site from my phone — here are the tools I used...</p>
+  <a href="blogs/best-coding-editors-for-mobile.html">Read More</a>
+</div>
+
+<div class="blog-card" data-category="tech">
+  <img src="img/human-vs-AI.webp" alt="coders and AI" width="" height="" loading="lazy" />
+  <h3>Will AI Replace Coders? My Thoughts</h3>
+  <p>AI is powerful, but here’s why human creativity still wins...</p>
+  <a href="blogs/will-coders-be-replaced-by-AI.html">Read More</a>
+</div>
+
+<!-- HUSTLE -->
+<div class="blog-card" data-category="hustle">
+  <img src="img/built-something-with-ease.webp" alt="Late Night Hustle" loading="lazy"/>
+  <h3>No Laptop, No Excuses — Just Grit</h3>
+  <p>From zero resources to building GrindHub with a phone. My journey...</p>
+  <a href="blogs/late-night-hustle-no-laptop-no-excuses.html">Read More</a>
+</div>
+
+<div class="blog-card" data-category="hustle">
+  <img src="/img/deriv-logo.png" alt="Deriv logo" loading="lazy"/>
+  <h3>Deriv Broker: The Smart Trader’s Playground</h3>
+  <p>In today’s fast-moving financial world, choosing the right broker is not just important...</p>
+  <a href="/blogs/deriv-broker.html">Read More</a>
+</div>
+
+<div class="blog-card" data-category="hustle">
+  <img src="img/top-3-hustle.webp" alt="Side Hustles" loading="lazy"/>
+  <h3>Top 3 Hustles You Can Start with $0</h3>
+  <p>These require skill, not capital. Just your grind mindset...</p>
+  <a href="blogs/top-3-hustles-you-can-start-with-zero-money.html">Read More</a>
+</div>
+
+<!-- TRADING -->
+<div class="blog-card" data-category="trading">
+  <img src="img/boom-and-crush.webp" alt="Boom Crash" loadin="lazy"/>
+  <h3>Boom & Crash: My $100 Day</h3>
+  <p>How I used sniper entries and risk control to grow a small account...</p>
+  <a href="blogs/boom-and-crush-my-$100-day.html">Read More</a>
+</div>
+
+<div class="blog-card" data-category="trading">
+  <img src="img/risky-management.webp" alt="Risk Management" width="" height="" loading="lazy"/>
+  <h3>Risk Management 101</h3>
+  <p>Forget profits — learn how not to blow your account first...</p>
+  <a href="blogs/risky-management-in-forex.html">Read More</a>
+</div>
+
+<!-- MINDSET -->
+<div class="blog-card" data-category="mindset">
+  <img src="img/discipline-over-motivation.webp" alt="Focus and Mindset" loading="lazy"/>
+  <h3>Discipline Over Motivation</h3>
+  <p>Why motivation fades but discipline keeps the fire burning...</p>
+  <a href="/blogs/Displine-Over-Motivation.html">Read More</a>
+</div>
+
+<div class="blog-card" data-category="mindset">
+  <img src="/img/deriv-vs-exness.jpg" alt="Deriv vs Exness" loading="lazy"/>
+  <h3>Deriv vs Exness</h3>
+  <p>Which Broker Is Better for Beginners and Small Capital Traders?.</p>
+  <a href="blogs/deriv-vs-exness.html">Read More</a>
+</div>
+
+<div class="blog-card" data-category="mindset">
+  <img src="../img/failure-taught-me-more-than-wins.webp" alt="Lessons from Failure" />
+  <h3>Failure Taught Me More Than Wins</h3>
+  <p>That loss hurt. But it was the lesson I needed most...</p>
+  <a href="blogs/failure-taught-me-more-than-wins.html">Read More</a>
+</div>
+
+<div id="scrollTopBtn" class="scroll-top-btn">↑</div>
+
+</section>
+
+ <hr class="rule" />
+<!-- Footer -->
+<footer>
+  <p>© 2026 GrindHub Africa | Built with 💚 and hustle</p>
+  <p>Follow our <a class="terms-link" href="terms.html">terms and conditions</a> | 
+  <a class="terms-link" href="privacy-policy.html">privacy policy</a></p>
+</footer>
+
+<script src="blog.js"></script>
+</body>
+</html>
