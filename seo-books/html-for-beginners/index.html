@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn HTML for Beginners | Step-by-Step HTML Basics</title>
+  <meta name="title" content="Learn HTML for Beginners – Easy & Practical HTML Guide">
+  <meta name="description" content="Learn HTML for beginners with this simple, step-by-step guide. Understand HTML basics, tags, elements, and structure to start building websites from scratch.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../css/book.css">
+</head>
+
+<body>
+
+  <div class="book-details-container">
+
+    <h1 class="book-title">Loading...</h1>
+
+    <img class="book-cover" src="" alt="html for beginners book cover">
+
+    <p class="book-details-description book-description">
+      Loading description...
+    </p>
+
+    <div class="book-buttons">
+      <a href="#" class="btn view-btn" target="_blank">📖 View PDF</a>
+      <a href="#" class="btn download-btn download-link" download>⬇️ Download PDF</a>
+    </div>
+
+    <!-- Optional formats (JS controlled) -->
+    <div id="download-options" style="display:none; margin-top:15px;">
+      <p>Select format:</p>
+      <button data-format="pdf">PDF</button>
+      <button data-format="epub">ePub</button>
+      <button data-format="mobi">MOBI</button>
+    </div>
+
+  </div>
+
+  <script>
+    async function loadBookDetails() {
+      const slug = window.location.pathname.split('/').filter(Boolean).pop();
+
+      try {
+        const response = await fetch('../../data/books.json');
+        const books = await response.json();
+
+        const book = books.find(b => b.slug === slug);
+
+        if (!book) {
+          document.querySelector('.book-title').textContent = 'Book not found';
+          return;
+        }
+
+        document.querySelector('.book-title').textContent = book.title;
+        document.querySelector('.book-description').textContent = book.description;
+        document.querySelector('.book-cover').src = `../../${book.image}`;
+        document.querySelector('.book-cover').alt = book.title;
+        document.querySelector('.view-btn').href = `../../${book.pdf}`;
+        document.querySelector('.download-link').href = `../../${book.pdf}`;
+
+      } catch (e) {
+        document.querySelector('.book-title').textContent = 'Error loading book';
+      }
+    }
+
+    loadBookDetails();
+  </script>
+
+</body>
+</html>

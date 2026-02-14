@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1B3201;
+  color: #080B04;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #4EE061;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+/* Category List */
+.category-list {
+  list-style: none;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Category Item */
+.category-list li a {
+  display: block;
+  background: whitesmoke;
+  padding: 14px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #080B04;
+  box-shadow: 0 0 10px rgba(78, 224, 97, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+.category-list li a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 16px rgba(78, 224, 97, 0.9);
+  background: #eaffef;
+}
+
+/* Active (tap on mobile) */
+.category-list li a:active {
+  transform: scale(0.97);
+}
