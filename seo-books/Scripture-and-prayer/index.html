@@ -57,8 +57,16 @@
         document.querySelector('.book-description').textContent = book.description;
         document.querySelector('.book-cover').src = `../../${book.image}`;
         document.querySelector('.book-cover').alt = book.title;
-        document.querySelector('.view-btn').href = `../../${book.pdf}`;
-        document.querySelector('.download-link').href = `../../${book.pdf}`;
+        document.querySelector('.book-cover').alt = book.title;
+    document.querySelector('.view-btn').href = book.file;
+    document.querySelector('.download-link').href = book.file;
+    document.querySelector('.view-btn').setAttribute("target", "_blank");
+
+   document.querySelector('.download-link').setAttribute("target", "_blank");
+   document.querySelector('.download-link').onclick = (e) => {
+  e.preventDefault();
+  window.open(book.file, "_blank", "noopener,noreferrer");
+};
 
       } catch (e) {
         document.querySelector('.book-title').textContent = 'Error loading book';
