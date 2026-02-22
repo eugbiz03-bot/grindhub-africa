@@ -1,37 +1,111 @@
 async function loadBookDetails() {
+  // ================================
+  // 1. Get book ID from URL
+  // ================================
   const params = new URLSearchParams(window.location.search);
   const bookId = params.get('id');
 
+  // DOM elements
+  const titleEl = document.querySelector('.book-title');
+  const descEl = document.querySelector('.book-description');
+  const coverEl = document.querySelector('.book-cover');
+  const viewBtn = document.querySelector('.view-btn');
+  const downloadBtn = document.querySelector('.download-link');
+
+  // ================================
+  // 2. Validate ID
+  // ================================
   if (!bookId) {
-    document.querySelector('.book-title').textContent = 'Invalid book ID';
-    document.querySelector('.book-description').textContent = '';
+    titleEl.textContent = 'Invalid book ID';
+    descEl.textContent = 'No book was selected.';
+    viewBtn.style.display = 'none';
+    downloadBtn.style.display = 'none';
     return;
   }
 
   try {
-    const response = await fetch('../data/books.json'); 
+    // ================================
+    // 3. Fetch books JSON
+    // ================================
+    const response = await fetch('../data/books.json');
+
+    if (!response.ok) {
+      throw new Error('Failed to load books.json');
+    }
+
     const books = await response.json();
 
+    // ================================
+    // 4. Find book by ID
+    // ================================
     const book = books.find(b => b.id === bookId);
 
     if (!book) {
-      document.querySelector('.book-title').textContent = 'Book not found';
-      document.querySelector('.book-description').textContent = '';
+      titleEl.textContent = 'Book not found';
+      descEl.textContent = 'This book does not exist in the database.';
+      viewBtn.style.display = 'none';
+      downloadBtn.style.display = 'none';
       return;
     }
 
-    // Fill in the book details
-    document.querySelector('.book-title').textContent = book.title;
-    document.querySelector('.book-description').textContent = book.description;
-    document.querySelector('.book-cover').src = `../${book.image}`;
-    document.querySelector('.book-cover').alt = book.title;
-    document.querySelector('.view-btn').href = `../${book.pdf}`;
-    document.querySelector('.download-link').href = `../${book.pdf}`;
+    // ================================
+    // 5. Fill book details
+    // ================================
+    titleEl.textContent = book.title;
+    descEl.textContent = book.description || 'No description available.';
+    coverEl.src = `../${book.image}`;
+    coverEl.alt = book.title;
+
+    // ================================
+    // 6. Validate file link
+    // ================================
+    if (!book.file || book.file.trim() === '') {
+      console.error('Book file link missing:', book);
+      viewBtn.style.display = 'none';
+      downloadBtn.style.display = 'none';
+      descEl.textContent = 'Download link not available for this book.';
+      return;
+    }
+
+    // ================================
+    // 7. Set button links
+    // ================================
+    viewBtn.href = book.file;
+    downloadBtn.href = book.file;
+
+    viewBtn.setAttribute("target", "_blank");
+    downloadBtn.setAttribute("target", "_blank");
+
+    viewBtn.setAttribute("rel", "noopener noreferrer");
+    downloadBtn.setAttribute("rel", "noopener noreferrer");
+
+    // ================================
+    // 8. Force external open (prevents Netlify routing)
+    // ================================
+    viewBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open(book.file, "_blank", "noopener,noreferrer");
+    });
+
+    downloadBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open(book.file, "_blank", "noopener,noreferrer");
+    });
+
   } catch (error) {
+    // ================================
+    // 9. Error handling
+    // ================================
     console.error('Error loading book details:', error);
-    document.querySelector('.book-title').textContent = 'Error loading book';
-    document.querySelector('.book-description').textContent = '';
+
+    titleEl.textContent = 'Error loading book';
+    descEl.textContent = 'Something went wrong while loading this book.';
+    viewBtn.style.display = 'none';
+    downloadBtn.style.display = 'none';
   }
 }
 
-loadBookDetails();
+// ================================
+// 10. Run loader
+// ================================
+document.addEventListener('DOMContentLoaded', loadBookDetails);
