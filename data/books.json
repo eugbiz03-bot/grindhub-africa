@@ -1,11 +1,38 @@
 [
   
   {
+    "id": "jcyforte",
+    "title": "Aim of Junior Cycle Visual Art",
+    "image": "../img-art&design/aim-of-junior-cycle-visual-art-junior-cycle-for-teachers.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1VJHwR9DPMy9JuiKdcQRGEqk6zYyuIVPF",
+    "description": "Visual Art at junior cycle aims to provide the student with a set of personal attitudes and qualities as well as skills and processes and a sense of the aesthetic.Through practical engagement in the areas of art, craft and design, students will develop self-confidence, inquisitiveness, imagination, and creativity. They will also develop authentic, real-world problem-solving capacities and the capacity to work over time, as an individual and in groups, on the design and execution of artistic and aesthetic tasks.",
+    "category": "Art and design"
+  },
+  
+  {
     "id": "nineteenth-century-art",
     "title": "Nineteenth Century Art",
-    "image": "/img-art&design/An-Introduction-to-19th-Century-Art.webp",
+    "image": "../img-art&design/An-Introduction-to-19th-Century-Art.webp",
     "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1qrB8BjNJNBDuADG4oA3ajRgIvMDo88gE",
     "description": "An Introduction to Nineteenth-Century Art by Michelle Facos.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "canpaibgtcp",
+    "title": "Canvas Painting 101! Beginners Guide To Canvas Painting",
+    "image": "../img-art&design/Canvas-Painting-author-Teresa-Thomas-Bohannon.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1XISAcFzTpB46N-353q1LKuRVg2Zwcw12",
+    "description": "People have been expressing themselves through painting for thousands of years. Even the cavemen showed great hunts or other events with paints made from berries and plants. There just seems to be an innate need to show others our thoughts, feelings, and ideas through pictures.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "sculpture-painting",
+    "title": "Catalogue of painting",
+    "image": "../img-art&design/Catalogue-of-painting-sculpture.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1JS-6KtrdLNcWq2os4xx6azZSQTIwvTbR",
+    "description": "Catalogue of painting sculptures",
     "category": "Art and design"
   },
   
@@ -37,11 +64,38 @@
   },
   
   {
+    "id": "EoSbas",
+    "title": "Essays Of Schopenhauer",
+    "image": "../img-art&design/essays-of-schopenhauer-arthur-schopenhauer.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1J8Tu7IJ2UET8AZXTEFYVS61OPxK8ppzo",
+    "description": "A book can never be anything more than the impression of its author's thoughts. The value of these thoughts lies either in the matter about which he has thought, or in the form in which he develops his matter—that is to say, what he has thought about it.",
+    "category": "Art and design"
+  },
+  
+  {
     "id": "evolving-perspective",
     "title": "Evolving perspectives",
     "image": "../img-art&design/evolving-perspectives-in-product-design-lucia-rampino.webp",
     "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1s1mEbWx1Woro9XdoJ4qm-wFL_RKKPpBW",
     "description": "Evolving perspective in product design. From Mass Production to Social Awareness",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "Eart-s-s-d",
+    "title": "Social and Spiritual Development Strand Expressive Arts",
+    "image": "../img-art&design/expressive-arts-neville-unduka.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1_ThGyLIx99zp13xr3aXGfEqvV4Dsc3E5",
+    "description": "This module is designed to introduce students to the range of skills appropriate to the teaching and learning of arts and crafts. Students will be given opportunities not only to learn about the skills but also to apply them in a variety of situations.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "GoATd",
+    "title": "Glossary of Art terms & definitions",
+    "image": "../img-art&design/Glossary-of-Art-terms-Definitions-author-Babel-Linguistics.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1Eu1wLJIP5PP6uttRHI4sWrPB6hVOu0Sp",
+    "description": "A chalk ground that absorbs oil and is used in oil painting to achieve a matt effect and to speed up drying. A water dispersion of polymers or co-polymers of acrylic acid, methacrylic acid, or acrylonitrile. Acrylic emulsions dry by evaporation of the water and film coalescence.",
     "category": "Art and design"
   },
   
@@ -82,11 +136,56 @@
   },
   
   {
+    "id": "idwillfisher",
+    "title": "Industrial Design",
+    "image": "../img-art&design/industrial-design-william-fisher.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1xFqQ9sc4Km0pT84fUSyblosk7lyil6VH",
+    "description": "The degree of difference required to establish novelty occurs when the average observer takes the new design for a different, and not for a modified already-existing, design.null.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "InterArt-by-rose",
+    "title": "INTERPRETING ART",
+    "image": "../img-art&design/interpreting-art-sam-rose-1726.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1OluRSpd-qk93WcOPkixEdm-nghRBWTHI",
+    "description": "Can we see into the minds of artists? Interpretations are often written as if the answer is a definite ‘yes’. This kind of mindreading goes back at least to the origins of modern art criticism in the early modern academies of art.",
+    "category": "Art and design"
+  },
+  
+  {
     "id": "looking-good",
     "title": "Looking good",
     "image": "../img-art&design/looking-good---an-introduction-to-industrial-designs-for-small-and-medium-sized-enterprises-wipo.webp",
     "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1pu0cQTCeQZKglGwLBD0kO-bdMxN8PqJt",
     "description": "An Introduction to Industrial Designs for Small and Medium-sized Enterprises",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "rtof-schopenhauer",
+    "title": "On the fourfold root Schopenhaur.",
+    "image": "../img-art&design/on-the-fourfold-root-schopenhauer.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=19Id-aCCqdQw6Uu-7PkOvRfwO8O0Cc4MF",
+    "description": "Schopenhauer is one of the great original writers of the nineteenth century, and a unique voice in the history of thought. His central concept of the will leads him to regard human beings as striving irrationally and suffering in a world that has no purpose, a condition redeemed by the elevation of aesthetic consciousness and finally overcome by the will’s self-denial and a mystical vision of the self as one with the world as a whole.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "On-womenAScho",
+    "title": "On Women",
+    "image": "../img-art&design/on-women-schopenhauer.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=11-X2rS6fAi_w5LWnW0UYvPfYFMLKEvU8",
+    "description": "One need only look at a woman’s shape to discover that she is not intended for either too much mental or too much physical work. She pays the debt of life not by what she does but by what she suffers — by the pains of child-bearing, care for the child, and by subjection to man, to whom she should be a patient and cheerful companion. The greatest sorrows and joys or great exhibition of strength are not assigned to her; her life should flow more quietly, more gently, and less obtrusively than man’s, without her being essentially happier or unhappier.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "Per-and-artssim",
+    "title": "PERFORMING AND VISUAL ARTS",
+    "image": "../img-art&design/performing-and-visual-arts-rakhi-bhattacharya.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1PkcokvhOYILZrFYMTuiNT_2-6RLINFvy",
+    "description": "Art and art education is related with aesthetics part of human development. There is no universally accepted definition of art though. Art is related with beauty but that's very vague as concept. What is art can be understood by variety of activities under the area of art.",
     "category": "Art and design"
   },
   
@@ -100,11 +199,38 @@
   },
   
   {
+    "id": "A-pas-port-stepbystep",
+    "title": "Step By Step A PASTEL PORTRAIT.",
+    "image": "../img-art&design/Step-by-Step-a-Pastel-Portrait-author-Emma-Ralph.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1KAPm1VaBXv5Tl2tr3iAQijQb30sgZNqD",
+    "description": "During the course of this demo, please use your own artistic intuition. Every artist is different and if you feel you need to press harder or softer please do so - this demo is just a guide to get you started and familiar with using pastels.",
+    "category": "Art and design"
+  },
+  
+  {
     "id": "art-painting",
     "title": "Art of painting",
     "image": "../img-art&design/The-art-of-figure-drawing.webp",
     "file": "https://drive.google.com/uc?export=download&comfirm=t&id=12pranFUxqW4pFFknXwKfq2Q2cmVtnesB",
     "description": "The art of painting.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "theBOMSc",
+    "title": "The Basis Of Morality.",
+    "image": "../img-art&design/the-basis-of-morality-arthur-schopenhauer.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=10x0TSX82s7gtRUJjXOrTw4yNKUN9iX1P",
+    "description": "Why do philosophers differ so widely as to the first principles of Morals, but agree respecting the conclusions and duties which they deduce from those principles?",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "ArtSctheessay",
+    "title": "The Essays Of Arthur Schopenhauer; Counsels And Maxims",
+    "image": "../img-art&design/the-essays-of-arthur-schopenhauer-counsels-and-maxims-arthur-schopenhauer.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1TRmwnP-wzkcrgzABYax73MgLXd8draAd",
+    "description": "The first and foremost rule for the wise conduct of life seems to me to be contained in a view to which Aristotle parenthetically refers in the Nichomachean Ethics.",
     "category": "Art and design"
   },
   
@@ -136,20 +262,47 @@
   },
   
   {
+    "id": "Th-is-DiDe",
+    "title": "THIS IS DISTRIBUTED DESIGN",
+    "image": "../img-art&design/this-is-distributed-design-distributed-design.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1hWZEusneFMbfbBxnovIxan1Pu566jkWQ",
+    "description": "The Distributed Design Platform was established in 2017, co-funded by the Creative Europe program of the European Union. It brings together a diverse member-base from cultural and creative institutions including Fab Labs, cultural organisations, universities and makerspaces. Over four years, the Platform has provided Europe-wide programming and opportunities to support emerging creatives working in the emerging field of Distributed Design. This book is the fourth in a series of yearly publications dedicated to the topic.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "Vis-artforteach",
+    "title": "Visual Arts Guidelines for Teachers of Students with MODERATE General Learning Disabilities.",
+    "image": "../img-art&design/visual-arts---guidelines-for-teachers-of-students-with-moderate-ncca.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1oB62XfxeiKIU5mkcGcDN77w3AcJZAcks",
+    "description": "Visual arts activities enable the student to communicate in a unique way and to organise experiences, ideas, feelings and imaginings in a visible and tangible way. Through drawing, painting, constructing and inventing, the student is enabled to assimilate, respond to, and make sense of, his/her experience of the world. Through its emphasis on the individuality and creativity of each student’s work, the visual arts curriculum serves to enhance self-confidence and self-esteem in the student. Instead of conformity, it encourages risk-taking and spontaneity and so celebrates uniqueness.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "visual-arts-va",
+    "title": "Visual Arts Arts Education",
+    "image": "../img-art&design/visual-arts-ncca.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1MIAv7sqTMWF1p9jHCyDehYh13mf3KxVY",
+    "description": "The arts are organised ex p ressions of ideas, feelings and experiences in images, in music, in language, in gesture and in movement. They provide for sensory, emotional, intellectual and creative enrichment and contribute to the child’s holistic development. Much of what is finest in society is developed through a va r i e ty of art forms which contribute to cultura lethos and to a sense of well-being.",
+    "category": "Art and design"
+  },
+  
+  {
+    "id": "Varts",
+    "title": "VISUAL ARTS",
+    "image": "../img-art&design/visual-arts-oklahoma-state-department-of-education.webp",
+    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1Adh7vg8b_suGCEkY4x4aYCNYlZaPmE_6",
+    "description": "The visual arts curriculum is organized under four major strands: Presenting, Responding, Creating, and Connecting. Each strand provides a clear outline of what students are to know across grade levels while providing unifying threads of understanding in support of the goals and objectives within the Visual Art standards. Presenting, responding, creating, and connecting are the strands in which all aspects of visual art can be organized and defined as follows.",
+    "category": "Art and design"
+  },
+  
+  {
     "id": "figure-drawing",
     "title": "Figure drawing",
     "image": "../img-art&design/The-art-of-figure-drawing.webp",
     "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1ie_4tsQI1go_T6Yhcotp3aj6XTP0KNok",
     "description": "The art of figure drawing",
-    "category": "Art and design"
-  },
-  
-  {
-    "id": "sculpture-painting",
-    "title": "Catalogue of painting",
-    "image": "../img-art&design/Catalogue-of-painting-sculpture.webp",
-    "file": "https://drive.google.com/uc?export=download&comfirm=t&id=1JS-6KtrdLNcWq2os4xx6azZSQTIwvTbR",
-    "description": "Catalogue of painting sculptures",
     "category": "Art and design"
   },
   
