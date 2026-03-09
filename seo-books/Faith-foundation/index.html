@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Faith Foundation | The Foundation of Faith by Harvestime International Institute
+  <title>Adventist Timeline | A Step-by-Step History of the Seventh-day Adventist Church
   </title>
-  <meta name="title" content="Faith Foundation – Biblical Foundations of Faith by Harvestime International Institute">
-  <meta name="description" content="Faith Foundation by Harvestime International Institute explores the biblical foundations of faith, helping believers understand, strengthen, and live out their faith with confidence and purpose.">
-  <meta name="description" content="">
+  <meta name="title" content="Adventist Timeline – Step-by-Step History of the Seventh-day Adventist Church">
+  <meta name="description" content="Explore the Adventist Timeline with a step-by-step, illustrated history of key events that shaped the Seventh-day Adventist Church from its beginnings to today.">
+  
+  <link rel="canonical" href="https://grindhub-africa.netlify.app/seo-books/Adventist-timeline/" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../../css/book.css">
@@ -18,7 +20,7 @@
 
     <h1 class="book-title">Loading...</h1>
 
-    <img class="book-cover" src="" alt="Faith foundation book cover">
+    <img class="book-cover" src="" alt="Adventist timeline book cover">
 
     <p class="book-details-description book-description">
       Loading description...
@@ -47,7 +49,7 @@
         const response = await fetch('../../data/books.json');
         const books = await response.json();
 
-        const book = books.find(b => b.slug === slug);
+        const book = books.find(b => b.slug === slug || b.id == slug);
 
         if (!book) {
           document.querySelector('.book-title').textContent = 'Book not found';
@@ -76,6 +78,22 @@
 
     loadBookDetails();
   </script>
+  
+  <!-- Default Statcounter code for My Website https://grindhub-africa.netlify.app
+-->
+<script type="text/javascript">
+var sc_project=13207191; 
+var sc_invisible=0; 
+var sc_security="93e48821"; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13207191/0/93e48821/0/" alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 
 </body>
 </html>
