@@ -6,6 +6,9 @@
   </title>
   <meta name="title" content="Scripture and Prayer – 40 Days of Devotion with Bold Faith">
   <meta name="description" content="Scripture and Prayer is a 40-day devotional journey designed to build bold faith, inspire action, and encourage sharing hope—one friend, one neighbor, one life changed.">
+  
+  <link rel="canonical" href="https://grindhub-africa.netlify.app/seo-books/Scripture-and-prayer/" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../../css/book.css">
@@ -46,7 +49,7 @@
         const response = await fetch('../../data/books.json');
         const books = await response.json();
 
-        const book = books.find(b => b.slug === slug);
+        const book = books.find(b => b.slug === slug || b.id == slug);
 
         if (!book) {
           document.querySelector('.book-title').textContent = 'Book not found';
@@ -75,6 +78,22 @@
 
     loadBookDetails();
   </script>
+  
+  <!-- Default Statcounter code for My Website https://grindhub-africa.netlify.app
+-->
+<script type="text/javascript">
+var sc_project=13207191; 
+var sc_invisible=0; 
+var sc_security="93e48821"; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13207191/0/93e48821/0/" alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 
 </body>
 </html>
