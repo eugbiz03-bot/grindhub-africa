@@ -6,6 +6,9 @@
   </title>
   <meta name="title" content="The Christian’s Life – Basic Christianity Series by Don Fleming">
   <meta name="description" content="The Christian’s Life by Don Fleming is part of the Basic Christianity series, offering clear teachings on Christian living, spiritual growth, and daily faith in action.">
+  
+  <link rel="canonical" href="https://grindhub-africa.netlify.app/seo-books/The-christians-life/" />
+  
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
@@ -47,7 +50,7 @@
         const response = await fetch('../../data/books.json');
         const books = await response.json();
 
-        const book = books.find(b => b.slug === slug);
+        const book = books.find(b => b.slug === slug || b.id == slug);
 
         if (!book) {
           document.querySelector('.book-title').textContent = 'Book not found';
@@ -76,6 +79,22 @@
 
     loadBookDetails();
   </script>
+  
+  <!-- Default Statcounter code for My Website https://grindhub-africa.netlify.app
+-->
+<script type="text/javascript">
+var sc_project=13207191; 
+var sc_invisible=0; 
+var sc_security="93e48821"; 
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13207191/0/93e48821/0/" alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 
 </body>
 </html>
