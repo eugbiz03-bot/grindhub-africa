@@ -65,18 +65,59 @@
 
   <!-- Tools Page -->
   <section class="tool-section">
+   <div class="tool-intro">
     <h2 style="text-align: center; margin-bottom: 2rem;">⚙️ Trading & Hustle Tools</h2>
+    
+    <p>Powerful tools designed to help traders calculate risk, manage trades, and make smarter decisions in the forex market.</p>
+   </div>
 
-    <!-- Risk Calculator -->
-    <div class="tool-card">
-      <h3>Risk Calculator (USD)</h3>
-      <input type="number" id="accountBalance" placeholder="Account Balance ($)" />
-      <input type="number" id="riskPercent" placeholder="Risk % (e.g. 2)" />
-      <button onclick="calculateRisk()">Calculate</button>
-      <div class="result" id="riskResult"></div>
-    </div>
+  <div class="tool-card">
+  <h2>Free Trading Tools</h2>
 
-    <!-- Motivation Generator -->
+  <input type="number" id="balance" placeholder="Account Balance ($)">
+  <input type="number" id="riskPercent" placeholder="Risk %">
+
+  <input type="number" id="entry" placeholder="Entry Price">
+  <input type="number" id="stopLoss" placeholder="Stop Loss">
+  <input type="number" id="takeProfit" placeholder="Take Profit">
+
+  <select id="pairType">
+    <option value="normal">Normal Pair (EURUSD)</option>
+    <option value="JPY">JPY Pair (USDJPY)</option>
+  </select>
+
+  <button onclick="calculateAll()">Calculate</button>
+
+  <div id="result"></div>
+</div>
+
+  <div class="tool-card">
+  <h3>Compounding Calculator</h3>
+
+  <input type="number" id="startBalance" placeholder="Starting Balance ($)">
+  <input type="number" id="growthPercent" placeholder="Gain % per trade/day">
+  <input type="number" id="trades" placeholder="Number of trades/days">
+
+  <button onclick="calculateGrowth()">Calculate</button>
+
+  <p id="growthResult"></p>
+</div>
+
+ <hr class="rule">
+
+  <div class="tool-intro">
+  <div class="j-trader">
+    <h2>Journal Trade</h2>
+    <p>Track every progress in your trading journal</p>
+    <a href="journal-page.html" class="J-btn">Add Trade</a>
+  </div>
+</div>
+
+ <hr class="rule">
+
+  <h2 style="text-align: center; margin-bottom: 2rem;">Quick Tools</h2>
+    
+    <!-- Motivationvation Generator -->
     <div class="tool-card">
       <h3>🔥 Motivation Generator</h3>
       <button onclick="generateQuote()">Get Motivation</button>
@@ -89,6 +130,29 @@
       <p>Lot Size = (Account Balance × Risk %) / Stop Loss</p>
       <p>Example: (100 × 2%) / 20 = 0.1 lots</p>
     </div>
+    
+    <div class="tool-card">
+  <h3>Trade Direction</h3>
+
+  <input type="number" id="entryDir" placeholder="Entry Price">
+  <input type="number" id="tpDir" placeholder="Take Profit">
+
+  <button onclick="detectTrend()">Check</button>
+
+  <p id="trendResult"></p>
+</div>
+    
+   <div class="tool-card">
+     <h3>Market Session Timer</h3>
+
+     <p id="sessionStatus">Checking session...</p>
+   </div>
+   
+    <div class="tool-card">
+     <h3>Trading Reminder</h3>
+     <p id="reminderText">Stay disciplined.</p>
+    </div>
+   
   </section>
   
   <hr class="rule"> 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const pdfCards = document.querySelectorAll('.pdf-card, .pdf-card-flex, .pdf-card-flex1, .pdf-category-card-with-bg');
+  const pdfCards = document.querySelectorAll('.pdf-card, .pdf-card-flex, .pdf-card-flex1, .pdf-category-card-with-bg, .pagination, .section-title');
   const hrElements = document.querySelectorAll('hr.rule');
   const searchInput = document.getElementById('search-input');
   const sectionTitles = document.querySelectorAll('h3.center-flex');

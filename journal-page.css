@@ -1,0 +1,40 @@
+body {
+      font-family: Arial;
+      padding: 15px;
+      background: #0f172a;
+      color: white;
+    }
+
+    input, select, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .profit {
+      color: #22c55e;
+    }
+
+    .loss {
+      color: #ef4444;
+    }
+
+    .delete {
+      background: red;
+      margin-top: 5px;
+    }

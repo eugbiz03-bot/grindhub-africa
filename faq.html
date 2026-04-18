@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - GrindHub Africa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+      background: #1e293b;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .faq-item:hover {
+      background: #334155;
+    }
+
+    .faq-question {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .faq-answer {
+      margin-top: 10px;
+      font-size: 14px;
+      display: none;
+      line-height: 1.6;
+    }
+
+    .active .faq-answer {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>❓ Frequently Asked Questions</h1>
+
+  <div class="faq-item">
+    <div class="faq-question">Are all samples free?</div>
+    <div class="faq-answer">No. GrindHub Africa offers both free and premium sample packs. Free packs can be downloaded at no cost, while premium packs require payment.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What’s the difference between free and premium samples?</div>
+    <div class="faq-answer">Premium samples usually have higher quality, more sounds, and exclusive content. Free samples are great for getting started but may be limited.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can I use these samples in my music?</div>
+    <div class="faq-answer">Yes. You can use both free and premium samples in your music projects, including commercial releases.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Do I need to give credit?</div>
+    <div class="faq-answer">Credit is not required, but it’s always appreciated.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Why do I need to enter my email before downloading?</div>
+    <div class="faq-answer">This helps support the platform and allows us to notify you about new sample packs and updates.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What format are the samples in?</div>
+    <div class="faq-answer">Samples are usually in WAV or MP3 format. WAV offers higher quality, while MP3 files are smaller and faster to download.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Why are some samples MP3 instead of WAV?</div>
+    <div class="faq-answer">MP3 files are used to reduce file size and make downloads easier, especially for mobile users.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can I use these samples in any DAW?</div>
+    <div class="faq-answer">Yes. These samples work in FL Studio, Ableton, Logic Pro, and most other music production software.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">My download isn’t working. What should I do?</div>
+    <div class="faq-answer">Try refreshing the page or checking your internet connection. If the issue continues, contact support.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can I resell or share these samples?</div>
+    <div class="faq-answer">No. You are not allowed to resell, redistribute, or share the samples as standalone files.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Do premium purchases come with lifetime access?</div>
+    <div class="faq-answer">Yes. Once you purchase a premium pack, you get lifetime access to download it anytime.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Are refunds available?</div>
+    <div class="faq-answer">Due to the nature of digital products, refunds are generally not available unless there is a technical issue.</div>
+  </div>
+
+  <footer>
+    Still have questions? <a href="about.html">Contact Us</a>
+  </footer>
+</div>
+
+<script>
+  const items = document.querySelectorAll('.faq-item');
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>

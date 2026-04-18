@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading Journal</title>
+  <script src="journal-page.js" defer></script>
+  <link rel="stylesheet" href="journal-page.css">
+</head>
+<body>
+
+</head>
+
+<body>
+
+  <h2>📊 Trading Journal</h2>
+
+  <!-- FORM -->
+    <input id="pair" placeholder="Pair (e.g Boom 1000)">
+    <select id="type">
+      <option>Buy</option>
+      <option>Sell</option>
+    </select>
+    <input id="profit" type="number" placeholder="Profit/Loss ($)">
+    
+    <input id="strategy" placeholder="Strategy (e.g Breakout)">
+    <select id="emotion">
+      <option value="">Emotion</option>
+      <option>Calm</option>
+      <option>Fear</option>
+      <option>Greed</option>
+    </select>
+
+    <input id="date" type="datetime-local" placeholder="datetime">
+
+    <input id="search" placeholder="Search by pair..." oninput="filterTrades()">
+
+    <button onclick="addTrade()">Add Trade</button>
+
+<!-- STATS -->
+<h3 id="stats"></h3>
+
+<!-- LIST -->
+<div id="tradeList"></div>
+
+</body>
+</html>
