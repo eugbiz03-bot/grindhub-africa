@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Details</title>
+  <link rel="stylesheet" href="../css/sample-details.css">
+</head>
+
+<body>
+  <h1>Sample Pack Details</h1>
+  <div class="pack-container">
+    
+  <!-- IMAGE -->
+  <div class="pack-image">
+    <img id="image" src="" alt="">
+  </div>
+  
+  <!-- INFO -->
+  <div class="pack-info">
+    <h2 id="title"></h2>
+    <p id="meta"></p>
+    <h4 id="description" class="sample-description"></h4>
+    <!-- AUDIO -->
+    <div id="previewContainer" class="preview-container"></div>
+    
+    
+    <!-- DOWNLOAD -->
+      <a id="downloadBtn" class="btn" target="_blank" rel="noopener">
+      ⬇ Download Pack
+      </a>
+      
+      <div id="loadingBox" style="display:none; text-align:center; margin-top:10px;">
+        <p>⏳ Wait while getting download link...</p>
+       <div class="spinner"></div>
+      </div>
+    
+    <div id="emailGate" style="display:none;" class="emailGate">
+      <h3>🔒 Enter your email to unlock download</h3>
+      <p style="font-size:12px;  opacity:0.7;">
+       We’ll never spam you.
+      </p>
+      <input type="email" id="emailInput" class="emailInput" placeholder="Enter your email" />
+      <button onclick="submitEmail()">Unlock Download</button>
+    </div>
+    
+  </div>
+</div>
+
+<!-- SOUNDS -->
+<div class="sounds-section">
+  <h2>🎵 Sounds Included</h2>
+  <ul id="soundList"></ul>
+</div>
+
+<script src="../js/sample-details.js"></script>
+</body>
+</html>
