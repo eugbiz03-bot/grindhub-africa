@@ -1,111 +1,71 @@
-async function loadBookDetails() {
-  // ================================
-  // 1. Get book ID from URL
-  // ================================
+document.addEventListener("DOMContentLoaded", async () => {
+
   const params = new URLSearchParams(window.location.search);
-  const bookId = params.get('id');
+  const bookId = params.get("id");
 
-  // DOM elements
-  const titleEl = document.querySelector('.book-title');
-  const descEl = document.querySelector('.book-description');
-  const coverEl = document.querySelector('.book-cover');
-  const viewBtn = document.querySelector('.view-btn');
-  const downloadBtn = document.querySelector('.download-link');
+  const titleEl = document.querySelector(".book-title");
+  const descEl = document.querySelector(".book-description");
+  const coverEl = document.querySelector(".book-cover");
+  const viewBtn = document.querySelector(".view-btn");
+  const downloadBtn = document.querySelector(".download-btn");
+  const shareContainer = document.getElementById("share-container");
 
-  // ================================
-  // 2. Validate ID
-  // ================================
   if (!bookId) {
-    titleEl.textContent = 'Invalid book ID';
-    descEl.textContent = 'No book was selected.';
-    viewBtn.style.display = 'none';
-    downloadBtn.style.display = 'none';
+    titleEl.textContent = "Invalid book ID";
     return;
   }
 
   try {
-    // ================================
-    // 3. Fetch books JSON
-    // ================================
-    const response = await fetch('../data/books.json');
-
-    if (!response.ok) {
-      throw new Error('Failed to load books.json');
-    }
-
+    const response = await fetch("../data/books.json");
     const books = await response.json();
 
-    // ================================
-    // 4. Find book by ID
-    // ================================
     const book = books.find(b => b.id === bookId);
 
     if (!book) {
-      titleEl.textContent = 'Book not found';
-      descEl.textContent = 'This book does not exist in the database.';
-      viewBtn.style.display = 'none';
-      downloadBtn.style.display = 'none';
+      titleEl.textContent = "Book not found";
       return;
     }
 
-    // ================================
-    // 5. Fill book details
-    // ================================
+    // Fill content
     titleEl.textContent = book.title;
-    descEl.textContent = book.description || 'No description available.';
-    coverEl.src = `../${book.image}`;
-    coverEl.alt = book.title;
+    descEl.textContent = book.description || "No description";
+    coverEl.src = "../" + book.image;
 
-    // ================================
-    // 6. Validate file link
-    // ================================
-    if (!book.file || book.file.trim() === '') {
-      console.error('Book file link missing:', book);
-      viewBtn.style.display = 'none';
-      downloadBtn.style.display = 'none';
-      descEl.textContent = 'Download link not available for this book.';
-      return;
-    }
-
-    // ================================
-    // 7. Set button links
-    // ================================
     viewBtn.href = book.file;
     downloadBtn.href = book.file;
 
-    viewBtn.setAttribute("target", "_blank");
-    downloadBtn.setAttribute("target", "_blank");
+    // =====================
+    // SHARE LINKS (WORKING)
+    // =====================
 
-    viewBtn.setAttribute("rel", "noopener noreferrer");
-    downloadBtn.setAttribute("rel", "noopener noreferrer");
+    const bookLink = window.location.href;
 
-    // ================================
-    // 8. Force external open (prevents Netlify routing)
-    // ================================
-    viewBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.open(book.file, "_blank", "noopener,noreferrer");
+    document.getElementById("whatsapp-share").href =
+      "https://wa.me/?text=" + encodeURIComponent(bookLink);
+
+    document.getElementById("facebook-share").href =
+      "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(bookLink);
+
+    document.getElementById("twitter-share").href =
+      "https://twitter.com/intent/tweet?url=" + encodeURIComponent(bookLink);
+
+    // =====================
+    // TOGGLE SHARE BUTTON
+    // =====================
+
+    const toggleBtn = document.getElementById("share-toggle");
+
+    toggleBtn.addEventListener("click", () => {
+      if (shareContainer.style.display === "block") {
+        shareContainer.style.display = "none";
+      } else {
+        shareContainer.style.display = "block";
+      }
     });
 
-    downloadBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.open(book.file, "_blank", "noopener,noreferrer");
-    });
-
-  } catch (error) {
-    // ================================
-    // 9. Error handling
-    // ================================
-    console.error('Error loading book details:', error);
-
-    titleEl.textContent = 'Error loading book';
-    descEl.textContent = 'Something went wrong while loading this book.';
-    viewBtn.style.display = 'none';
-    downloadBtn.style.display = 'none';
+  } catch (err) {
+    console.error(err);
+    titleEl.textContent = "Error loading book";
   }
-}
 
-// ================================
-// 10. Run loader
-// ================================
-document.addEventListener('DOMContentLoaded', loadBookDetails);
+});
