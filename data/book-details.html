@@ -22,9 +22,12 @@
     <div class="book-info">
       <h1 class="book-title">Loading title...</h1>
       <p class="book-description">Loading description...</p>
-      <a href="#" target="_blank" class="btn view-btn">📖 View</a>
-      <a href="#" class="btn download-btn download-link">⬇️ Download</a>
-    
+      
+      <div class="book-actions">
+        <a href="#" target="_blank" class="btn view-btn">📖 View</a>
+        <a href="#" class="btn download-btn download-link">⬇️ Download</a>
+      </div>
+      
     <div id="download-options" style="display:none; margin-top:10px;">
     <p>Select format:</p>
      <button data-format="pdf">PDF</button>
@@ -36,6 +39,14 @@
     </div>
   </div>
   </section>
+  
+  <button id="share-toggle" class="btn">Share</button>
+  <div id="share-container" class="share-container">
+    <a id="whatsapp-share" target="_blank" class="whatsapp">Share on WhatsApp</a>
+    <a id="facebook-share" target="_blank" class="facebook">Share on Facebook</a>
+    <a id="twitter-share" target="_blank" class="twitter">Share on Twitter</a>
+  </div>
+  
   <script src="../js/book-details.js" defer></script>
   
   <!-- Default Statcounter code for My Website https://grindhub-africa.netlify.app
