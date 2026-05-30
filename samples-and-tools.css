@@ -63,7 +63,6 @@ h2 {
 }
 
 .card {
-  position: relative;
   background: #1e1e1e;
   padding: 15px;
   border-radius: 10px;
@@ -71,7 +70,6 @@ h2 {
 }
 
 .card-img {
-  position: relative;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -119,15 +117,6 @@ h2 {
 
 .filter-bar button:hover {
   background: #555;
-}
-
-.badge {
-  background: #B60B0B;
-  color: #000;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
 }
 
 .sample-card {
@@ -244,6 +233,10 @@ h2 {
   font-size: 18px;
   color: #aaa;
   transition: 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #00ff88;
 }
 
 .footer-bottom {

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samples & Tools</title>
+  <link rel="stylesheet" href="samples-and-tools.css">
+  <script src="samples-and-tools.js"></script>
+</head>
+
+<body>
+  <h1>🎛️ Samples & Tools</h1>
+<header class="header">
+  <h2>Free sounds & tools for producers</h2>
+  <br>
+  <p>Welcome to the <b>Samples Hub</b> — your go-to space for high-quality music resources built for real creators.</p>
+  <br>
+  <p>Here you’ll find a growing collection of drum kits, loop packs, melodies, and sound essentials, all designed to elevate your production. Alongside the sounds, you also get access to useful music tools to speed up your workflow and sharpen your creativity.</p>
+  <br>
+  <p>Everything here is made to help you create faster, better, and with your own unique style.</p>
+</header>
+
+<!-- TOOLS -->
+<section class="section">
+  <h2>⚙️ Tools</h2>
+
+  <div class="tools-grid">
+
+    <div class="card">
+      <h3>BPM Tap</h3>
+      <p>Tap to detect tempo</p>
+      <button id="tapBtn" class="tapBtn">Tap BPM</button>
+      <p id="bpmResult">BPM: --</p>
+    </div>
+
+    <div class="card">
+      <h3>Key Finder</h3>
+      <p>Select a key</p>
+      <select id="keySelect">
+        <option>C Major</option>
+        <option>A Minor</option>
+        <option>G Major</option>
+        <option>E Minor</option>
+      </select>
+    </div>
+
+  </div>
+</section>
+
+ <hr class="rule">
+
+<!-- FEATURED -->
+<section class="section">
+  <h2>🔥 Featured Packs</h2>
+
+  <div class="samples-grid">
+
+  <div class="card featured">
+    <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775530607/Lofi_jazz_chords_progressions_wtm89g.png" alt="Free lo-fi jazz chords progression" class="card-img">
+    <h3>Free jazzy chords progression</h3>
+    <a href="../data/sample-details.html?id=Lo-fi-Jazzy-Chords-Progression" class="btn">
+      Download
+    </a>
+  </div>
+
+</div>
+  
+  <hr class="rule">
+
+<!-- FILTER -->
+
+  <h2>🎵 Samples & Packs</h2>
+
+  <div class="filter-bar">
+    <button onclick="filterSamples('all')">All</button>
+    <button onclick="filterSamples('drum')">Drum Kits</button>
+    <button onclick="filterSamples('loop')">Loops</button>
+    <button onclick="filterSamples('midi')">MIDI</button>
+  </div>
+  
+  <section class="sample-section">
+  
+  <div class="samples-grid" id="samplesContainer">
+
+    <!-- SAMPLE -->
+    
+  <div class="sample-card" data-type="drum">
+  <a href="../data/sample-details.html?id=90s-mpc-samples-pack">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775015790/90s-mpc-samples_b6ogrl.png" alt="Drum Kits">
+    </div>
+    <div class="card-content">
+      <h3>90s Classic MPC Sample Pack</h3>
+      <p>222 sounds • Drums</p>
+    </div>
+  </a>
+  </div>
+  
+  
+  <div class="sample-card" data-type="loop">
+  <a href="../data/sample-details.html?id=volts-strings">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775100257/VoltStrings_xk6a7s.png" alt="Voltstrings">
+    </div>
+    <div class="card-content">
+      <h3>Voltstrings</h3>
+      <p>20 Loops • Electric Guitar</p>
+    </div>
+  </a>
+  </div>
+  
+  
+  <div class="sample-card" data-type="loop">
+  <a href="../data/sample-details.html?id=obsidian-trap-loops">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775134606/Obsidian_Trap_Loops_itwsvv.png" alt="Obsidian Trap Loops">
+    </div>
+    <div class="card-content">
+      <h3>Obsidian Trap Loops</h3>
+      <p>20 loops • Trap loops</p>
+    </div>
+  </a>
+  </div>
+  
+    
+  <div class="sample-card" data-type="loop">
+  <a href="../data/sample-details.html?id=velvetgroove-loops">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775293706/VelVetGroove_Loops_aetjr9.png" alt="VelvetGroove Loops">
+    </div>
+    <div class="card-content">
+      <h3>VelVetGroove Loops</h3>
+      <p>A late night season turned into sound</p>
+    </div>
+  </a>
+  </div>
+  
+  <div class="sample-card" data-type="loop">
+  <a href="../data/sample-details.html?id=fermi-riffs-final-set">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775293463/fermi_riffs_-_Final_Set_wz21vw.png" alt="Fermi Riffs">
+    </div>
+    <div class="card-content">
+      <h3>Fermi Riffs</h3>
+      <p>fermi riffs - final set</p>
+    </div>
+  </a>
+  </div>
+
+  <div class="sample-card" data-type="loop">
+  <a href="../data/sample-details.html?id=dustknock-drums">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775292600/DUSTKNOCK_DRUM_KIT_u7voky.png" alt="DustKnock Drum Kit">
+    </div>
+    <div class="card-content">
+      <h3>DustKnock Drum Kit</h3>
+      <p>A collection built from the soul of the golden era</p>
+    </div>
+  </a>
+  </div>
+  
+  <div class="sample-card" data-type="midi">
+  <a href="../data/sample-details.html?id=midi-scales-loops">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775421342/MIDI_Scales_Reference_Pack_vz11k7.png" alt="MIDI Scales Reference">
+    </div>
+    <div class="card-content">
+      <h3>MIDI Scales Reference Pack</h3>
+      <p>Level up your music theory and unlock real creative control with MIDI Scales Reference Pack.</p>
+    </div>
+  </a>
+  </div>
+  
+  <div class="sample-card" data-type="drums">
+  <a href="../data/sample-details.html?id=jungles-timeless-breaks">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775422873/Timeless_Jungle_Breaks_vhtufu.png" alt="Jungles Timeless Breaks">
+    </div>
+    <div class="card-content">
+      <h3>Jungles Timeless Breaks</h3>
+      <p>A collection built to capture the raw heartbeat of breakbeat culture.</p>
+    </div>
+  </a>
+  </div>
+  
+  <div class="sample-card" data-type="loop">
+  <a href="../data/sample-details.html?id=best-sytrus-presents">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775421398/Best_sytrus_sounds_pzcmxo.png" alt="best sytrus presents">
+    </div>
+    <div class="card-content">
+      <h3>Best Sytrus Presents</h3>
+      <p>A carefully crafted collection built for producers who want unique, high-quality sounds.</p>
+    </div>
+  </a>
+  </div>
+  
+  <div class="sample-card" data-type="loop">
+  <a href="../data/sample-details.html?id=free-bass-samples">
+    <div class="card-image">
+      <img src="https://res.cloudinary.com/dv40i8q7b/image/upload/f_auto,q_auto/v1775448139/free_bass_samples_uwerpk.png" alt="Bass Samples">
+    </div>
+    <div class="card-content">
+      <h3>Free Bass Samples</h3>
+      <p>A powerful collection built to bring depth, weight, and energy into your music.</p>
+    </div>
+  </a>
+  </div>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h2>GrindHub Africa</h2>
+      <p>Empowering creators with free, high-quality samples and tools.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#">Samples</a></li>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Connect</h3>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">📩</a>
+        <a href="#">📢</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 GrindHub Africa. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

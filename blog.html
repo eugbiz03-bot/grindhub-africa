@@ -37,25 +37,32 @@
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="blog.css" />
-  <script src="scroll-up.js" defer></script>
 
 </head>
-<body>
+<body class="preload">
 
 <!-- Header -->
-<header>
-  <nav class="navbar">
-    <div class="logo">GrindHub</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="pdfs.html">PDFs</a></li>
-      <li><a href="beats.html">Beats</a></li>
-      <li><a href="tools.html">Tools</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-</header>
+ <header>
+    <nav class="navbar">
+      <div class="logo">GrindHub Africa</div>
+
+      <!-- Hamburger Button -->
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pdfs.html">Library</a></li>
+        <li><a href="/sound-lab/index.html">Sound Lab</a></li>
+        <li><a href="tools.html">ToolBox</a></li>
+        <li><a href="#">Insights</a></li>
+        <li><a href="/digital-service/digital-service-offers.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <!-- Blog Hero -->
 <section class="blog-hero">
@@ -95,7 +102,7 @@
   </div>
 
   <div class="blog-card" data-category="tech">
-    <img src="img/AI-in-forex.webp" alt="AI" width="" height="250" loading="lazy"/>
+    <img src="img/ai-in-forex.webp" alt="AI" width="" height="250" loading="lazy"/>
     <h3>AI is Taking Over — Can It Beat Forex?</h3>
     <p>We explore how AI tools are changing the way we analyze trades...</p>
     <a href="blogs/AI-in-forex.html">Read More</a>
@@ -135,7 +142,7 @@
 
 
 <div class="blog-card" data-category="tech">
-  <img src="img/human-vs-AI.webp" alt="coders and AI" width="" height="" loading="lazy" />
+  <img src="img/human-vs-ai.webp" alt="coders and AI" width="" height="" loading="lazy" />
   <h3>Will AI Replace Coders? My Thoughts</h3>
   <p>AI is powerful, but here’s why human creativity still wins...</p>
   <a href="blogs/will-coders-be-replaced-by-AI.html">Read More</a>
@@ -213,6 +220,8 @@
 </footer>
 
 <script src="blog.js"></script>
+<script src="/scroll-up.js"></script>
+<script src="/js/menu-tonggle.js"></script>
 
 <!-- Default Statcounter code for My Website https://grindhub-africa.netlify.app
 -->
