@@ -28,17 +28,51 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Fill content
     titleEl.textContent = book.title;
+    document.title = book.title + " | GrindHub Africa";
     descEl.textContent = book.description || "No description";
-    coverEl.src = "../" + book.image;
+    coverEl.src = book.image;
 
     viewBtn.href = book.file;
-    downloadBtn.href = book.file;
+    viewBtn.setAttribute("target", "_blank");
+
+    // =====================
+    // DOWNLOAD WITH 5-SECOND COUNTDOWN
+    // =====================
+
+    downloadBtn.href = "#";
+    downloadBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      if (downloadBtn.dataset.counting === "true") return; // ignore repeat clicks mid-countdown
+
+      downloadBtn.dataset.counting = "true";
+      downloadBtn.classList.add("counting");
+      let seconds = 5;
+      const originalText = "⬇️ Download";
+
+      downloadBtn.textContent = `Starting in ${seconds}...`;
+
+      const interval = setInterval(() => {
+        seconds--;
+        if (seconds > 0) {
+          downloadBtn.textContent = `Starting in ${seconds}...`;
+        } else {
+          clearInterval(interval);
+          downloadBtn.textContent = originalText;
+          downloadBtn.classList.remove("counting");
+          downloadBtn.dataset.counting = "false";
+          window.open(book.file, "_blank", "noopener,noreferrer");
+        }
+      }, 1000);
+    });
 
     // =====================
     // SHARE LINKS (WORKING)
     // =====================
 
-    const bookLink = window.location.href;
+    const bookLink = book.slug
+      ? `https://grindhub-africa.netlify.app/seo-books/${book.slug}/`
+      : window.location.href;
 
     document.getElementById("whatsapp-share").href =
       "https://wa.me/?text=" + encodeURIComponent(bookLink);
@@ -56,11 +90,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const toggleBtn = document.getElementById("share-toggle");
 
     toggleBtn.addEventListener("click", () => {
-      if (shareContainer.style.display === "block") {
-        shareContainer.style.display = "none";
-      } else {
-        shareContainer.style.display = "block";
-      }
+      shareContainer.classList.toggle("active");
     });
 
   } catch (err) {

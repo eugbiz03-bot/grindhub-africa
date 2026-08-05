@@ -153,6 +153,12 @@ h1 {
   transform: scale(1.05);
 }
 
+#downloadBtn.counting {
+  background: #0d3b1e;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .spinner {
   width: 25px;
   height: 25px;

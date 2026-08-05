@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
 btn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  // ✅ If already unlocked → download directly
+  // ✅ If already unlocked → start countdown, then download
   if (window.isUnlocked && window.currentSample) {
-    triggerDownload(window.currentSample.file);
+    startCountdownAndDownload(btn, window.currentSample.file);
     return;
   }
   
@@ -108,8 +108,32 @@ function handleDownload(sample) {
     if (gate) gate.style.display = "block";
     if (btn) btn.style.display = "none";
   } else {
-    triggerDownload(sample.file);
+    startCountdownAndDownload(btn, sample.file);
   }
+}
+
+function startCountdownAndDownload(btn, file) {
+  if (!btn || btn.dataset.counting === "true") return; // ignore repeat clicks mid-countdown
+
+  btn.dataset.counting = "true";
+  btn.classList.add("counting");
+  const originalText = btn.textContent;
+  let seconds = 5;
+
+  btn.textContent = `Starting in ${seconds}...`;
+
+  const interval = setInterval(() => {
+    seconds--;
+    if (seconds > 0) {
+      btn.textContent = `Starting in ${seconds}...`;
+    } else {
+      clearInterval(interval);
+      btn.textContent = originalText;
+      btn.classList.remove("counting");
+      btn.dataset.counting = "false";
+      triggerDownload(file);
+    }
+  }, 1000);
 }
 
 function triggerDownload(file) {
@@ -129,38 +153,49 @@ function hideLoading() {
   if (box) box.style.display = "none";
 }
 
-function submitEmail() {
-  const email = document.getElementById("emailInput").value;
-  window.isUnlocked = true;
-  if (!email) return;
+async function submitEmail() {
+  const email = document.getElementById("emailInput").value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
 
   showLoading(); // 🔥 show "Wait..." + spinner
 
-  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdmndPZFqkyDNAk7lvA9wT3kgO109jOoSJwhzzoi3eobnNQTQ/formResponse";
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Accept": "application/json", "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: "3d7c63fd-c82e-4b1c-9e03-84d6fc6c8f8d",
+        subject: "New Sample Hub Download Lead",
+        email: email,
+        sample: window.currentSample ? window.currentSample.name : "unknown"
+      })
+    });
 
-  const formData = new FormData();
-  formData.append("entry.1537021743", email);
+    const data = await response.json();
+    hideLoading();
 
-  fetch(formUrl, {
-    method: "POST",
-    mode: "no-cors",
-    body: formData
-  });
+    if (!data.success) {
+      alert("Something went wrong submitting your email. Please try again.");
+      return;
+    }
 
-  // simulate processing delay (5 seconds)
-  setTimeout(() => {
-  hideLoading();
+    // ✅ Only unlock after a CONFIRMED successful submission
+    document.getElementById("emailGate").style.display = "none";
+    window.isUnlocked = true;
 
-  document.getElementById("emailGate").style.display = "none";
+    const btn = document.getElementById("downloadBtn");
+    btn.style.display = "block";
+    btn.textContent = "⬇ Download Now";
 
-  // ✅ Mark as unlocked
-  window.isUnlocked = true;
-
-  const btn = document.getElementById("downloadBtn");
-  btn.style.display = "block";
-  btn.textContent = "⬇ Download Now";
-
-}, 5000);
+  } catch (err) {
+    hideLoading();
+    alert("Network error — please check your connection and try again.");
+  }
 }
 
 function setLink(id, href) {

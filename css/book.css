@@ -77,9 +77,19 @@ h1 {
   background: #28A745;
 }
 
+.download-btn.counting {
+  background: #0d3b1e;
+  cursor: not-allowed;
+}
+
 .btn:hover {
   transform: translateY(-2px);
   opacity: 0.9;
+}
+
+.download-btn.counting:hover {
+  transform: none;
+  opacity: 1;
 }
 
 /* DOWNLOAD OPTIONS */
