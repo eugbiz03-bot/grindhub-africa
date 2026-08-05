@@ -2,12 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Advanced Mathematics | Concepts, Formulas & Problem Solving
-  </title>
+  <title>Advanced Mathematics | Concepts, Formulas & Problem Solving</title>
   <meta name="title" content="Advanced Mathematics | Concepts, Formulas, and Problem-Solving Guides">
 <meta name="description" content="Learn advanced mathematics with clear explanations, formulas, and step-by-step problem-solving techniques. Perfect for students, engineers, and math enthusiasts.">
 
 <link rel="canonical" href="https://grindhub-africa.netlify.app/seo-books/advanced-mathematics/" />
+
+<meta property="og:title" content="Advanced Mathematics | Concepts, Formulas & Problem Solving" />
+<meta property="og:description" content="Learn advanced mathematics with clear explanations, formulas, and step-by-step problem-solving techniques.">
+<meta property="og:type" content="book" />
+<meta property="og:url" content="https://grindhub-africa.netlify.app/seo-books/advanced-mathematics/" />
+<meta property="og:image" content="https://grindhub-africa.netlify.app/img-education-&-learning/covers/advanced-mathematics.webp" />
+<meta property="og:site_name" content="GrindHub Africa" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Advanced Mathematics | Concepts, Formulas & Problem Solving" />
+<meta name="twitter:description" content="Learn advanced mathematics with clear explanations, formulas, and step-by-step problem-solving techniques.">
+<meta name="twitter:image" content="https://grindhub-africa.netlify.app/img-education-&-learning/covers/advanced-mathematics.webp" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
@@ -17,6 +28,10 @@
 <body>
 
   <div class="book-details-container">
+
+    <p style="text-align:center; margin-bottom:10px;">
+      <a href="/pdfs.html" style="color:#4EE061; text-decoration:none; font-weight:600; font-size:0.9rem;">🏠 More free PDFs at GrindHub Africa →</a>
+    </p>
 
     <h1 class="book-title">Loading...</h1>
 
@@ -41,43 +56,7 @@
 
   </div>
 
-  <script>
-    async function loadBookDetails() {
-      const slug = window.location.pathname.split('/').filter(Boolean).pop();
-
-      try {
-        const response = await fetch('../../data/books.json');
-        const books = await response.json();
-
-        const book = books.find(b => b.slug === slug || b.id == slug);
-
-        if (!book) {
-          document.querySelector('.book-title').textContent = 'Book not found';
-          return;
-        }
-
-        document.querySelector('.book-title').textContent = book.title;
-        document.querySelector('.book-description').textContent = book.description;
-        document.querySelector('.book-cover').src = `../../${book.image}`;
-        document.querySelector('.book-cover').alt = book.title;
-        document.querySelector('.book-cover').alt = book.title;
-    document.querySelector('.view-btn').href = book.file;
-    document.querySelector('.download-link').href = book.file;
-    document.querySelector('.view-btn').setAttribute("target", "_blank");
-
-   document.querySelector('.download-link').setAttribute("target", "_blank");
-   document.querySelector('.download-link').onclick = (e) => {
-  e.preventDefault();
-  window.open(book.file, "_blank", "noopener,noreferrer");
-};    
-
-      } catch (e) {
-        document.querySelector('.book-title').textContent = 'Error loading book';
-      }
-    }
-
-    loadBookDetails();
-  </script>
+  <script src="/js/seo-book-details.js" defer></script>
   
   <!-- Default Statcounter code for My Website https://grindhub-africa.netlify.app
 -->

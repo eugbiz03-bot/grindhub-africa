@@ -8,6 +8,18 @@
   
   <link rel="canonical" href="https://grindhub-africa.netlify.app/seo-books/geography-notes/" />
 
+  <meta property="og:title" content="Geography Notes | School Level Physical & Human Geography" />
+  <meta property="og:description" content="School-level geography notes covering physical geography, human geography, map reading, weather, and climate.">
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://grindhub-africa.netlify.app/seo-books/geography-notes/" />
+  <meta property="og:image" content="https://grindhub-africa.netlify.app/img-education-&-learning/covers/geography-notes.webp" />
+  <meta property="og:site_name" content="GrindHub Africa" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Geography Notes | School Level Physical & Human Geography" />
+  <meta name="twitter:description" content="School-level geography notes covering physical geography, human geography, map reading, weather, and climate.">
+  <meta name="twitter:image" content="https://grindhub-africa.netlify.app/img-education-&-learning/covers/geography-notes.webp" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../../css/book.css">
@@ -16,6 +28,10 @@
 <body>
 
   <div class="book-details-container">
+
+    <p style="text-align:center; margin-bottom:10px;">
+      <a href="/pdfs.html" style="color:#4EE061; text-decoration:none; font-weight:600; font-size:0.9rem;">🏠 More free PDFs at GrindHub Africa →</a>
+    </p>
 
     <h1 class="book-title">Loading...</h1>
 
@@ -40,43 +56,7 @@
 
   </div>
 
-  <script>
-    async function loadBookDetails() {
-      const slug = window.location.pathname.split('/').filter(Boolean).pop();
-
-      try {
-        const response = await fetch('../../data/books.json');
-        const books = await response.json();
-
-        const book = books.find(b => b.slug === slug || b.id == slug);
-
-        if (!book) {
-          document.querySelector('.book-title').textContent = 'Book not found';
-          return;
-        }
-
-        document.querySelector('.book-title').textContent = book.title;
-        document.querySelector('.book-description').textContent = book.description;
-        document.querySelector('.book-cover').src = `../../${book.image}`;
-        document.querySelector('.book-cover').alt = book.title;
-        document.querySelector('.book-cover').alt = book.title;
-    document.querySelector('.view-btn').href = book.file;
-    document.querySelector('.download-link').href = book.file;
-    document.querySelector('.view-btn').setAttribute("target", "_blank");
-
-   document.querySelector('.download-link').setAttribute("target", "_blank");
-   document.querySelector('.download-link').onclick = (e) => {
-  e.preventDefault();
-  window.open(book.file, "_blank", "noopener,noreferrer");
-};
-
-      } catch (e) {
-        document.querySelector('.book-title').textContent = 'Error loading book';
-      }
-    }
-
-    loadBookDetails();
-  </script>
+  <script src="/js/seo-book-details.js" defer></script>
   
   <!-- Default Statcounter code for My Website https://grindhub-africa.netlify.app
 -->

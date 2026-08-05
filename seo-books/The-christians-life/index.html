@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Christian’s Life | Basic Christianity Series by Don Fleming
-  </title>
-  <meta name="title" content="The Christian’s Life – Basic Christianity Series by Don Fleming">
-  <meta name="description" content="The Christian’s Life by Don Fleming is part of the Basic Christianity series, offering clear teachings on Christian living, spiritual growth, and daily faith in action.">
+  <title>The Christian's Life | Basic Christianity Series by Don Fleming</title>
+  <meta name="title" content="The Christian's Life – Basic Christianity Series by Don Fleming">
+  <meta name="description" content="The Christian's Life by Don Fleming is part of the Basic Christianity series, offering clear teachings on Christian living, spiritual growth, and daily faith in action.">
   
   <link rel="canonical" href="https://grindhub-africa.netlify.app/seo-books/The-christians-life/" />
-  
-  <meta name="description" content="">
+
+  <meta property="og:title" content="The Christian's Life | Basic Christianity Series by Don Fleming" />
+  <meta property="og:description" content="Clear teachings on Christian living, spiritual growth, and daily faith in action.">
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://grindhub-africa.netlify.app/seo-books/The-christians-life/" />
+  <meta property="og:image" content="https://grindhub-africa.netlify.app/img-spiritually-&-region/covers/The-Christian-s-Life-Autor-Don-Fleming.webp" />
+  <meta property="og:site_name" content="GrindHub Africa" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Christian's Life | Basic Christianity Series by Don Fleming" />
+  <meta name="twitter:description" content="Clear teachings on Christian living, spiritual growth, and daily faith in action.">
+  <meta name="twitter:image" content="https://grindhub-africa.netlify.app/img-spiritually-&-region/covers/The-Christian-s-Life-Autor-Don-Fleming.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../../css/book.css">
@@ -18,6 +27,10 @@
 <body>
 
   <div class="book-details-container">
+
+    <p style="text-align:center; margin-bottom:10px;">
+      <a href="/pdfs.html" style="color:#4EE061; text-decoration:none; font-weight:600; font-size:0.9rem;">🏠 More free PDFs at GrindHub Africa →</a>
+    </p>
 
     <h1 class="book-title">Loading...</h1>
 
@@ -42,43 +55,7 @@
 
   </div>
 
-  <script>
-    async function loadBookDetails() {
-      const slug = window.location.pathname.split('/').filter(Boolean).pop();
-
-      try {
-        const response = await fetch('../../data/books.json');
-        const books = await response.json();
-
-        const book = books.find(b => b.slug === slug || b.id == slug);
-
-        if (!book) {
-          document.querySelector('.book-title').textContent = 'Book not found';
-          return;
-        }
-
-        document.querySelector('.book-title').textContent = book.title;
-        document.querySelector('.book-description').textContent = book.description;
-        document.querySelector('.book-cover').src = `../../${book.image}`;
-        document.querySelector('.book-cover').alt = book.title;
-        document.querySelector('.book-cover').alt = book.title;
-    document.querySelector('.view-btn').href = book.file;
-    document.querySelector('.download-link').href = book.file;
-    document.querySelector('.view-btn').setAttribute("target", "_blank");
-
-   document.querySelector('.download-link').setAttribute("target", "_blank");
-   document.querySelector('.download-link').onclick = (e) => {
-  e.preventDefault();
-  window.open(book.file, "_blank", "noopener,noreferrer");
-};
-
-      } catch (e) {
-        document.querySelector('.book-title').textContent = 'Error loading book';
-      }
-    }
-
-    loadBookDetails();
-  </script>
+  <script src="/js/seo-book-details.js" defer></script>
   
   <!-- Default Statcounter code for My Website https://grindhub-africa.netlify.app
 -->
