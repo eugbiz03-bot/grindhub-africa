@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const wrapper = title.nextElementSibling;
       if (!wrapper) return;
 
-      const flexCards = wrapper.querySelectorAll('.pdf-card-flex, pdf-card-flex1');
+      const flexCards = wrapper.querySelectorAll('.pdf-card-flex, .pdf-card-flex1');
       const anyFlexVisible = Array.from(flexCards).some(card => card.style.display !== 'none');
 
       title.style.display = anyFlexVisible ? '' : 'none';

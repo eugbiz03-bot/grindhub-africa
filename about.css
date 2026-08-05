@@ -29,17 +29,17 @@ label {
 
 .form-collapse {
   margin-top: 16px;
-  border: 1px solid #e2e2e2;
+  border: 1px solid #046F31;
   border-radius: 8px;
   padding: 12px 14px;
-  background: #5E6F5C;
+  background: #0e1b12;
 }
 
 .form-collapse summary {
   cursor: pointer;
   font-weight: 600;
   font-size: 15px;
-  color: #222;
+  color: #fff;
   list-style: none;
   display: flex;
   align-items: center;
@@ -74,6 +74,13 @@ textarea {
   border: none;
   font-size: 1rem;
   line-height: 1;
+  transition: box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00a651;
 }
 
 textarea {
@@ -82,7 +89,8 @@ textarea {
 
 button {
   margin-top: 2%;
-  width: 30%;
+  min-width: 140px;
+  width: auto;
   background-color: #00a651;
   color: white;
   border: none;
@@ -113,7 +121,6 @@ footer {
 }
 
 .terms-link:active {
-  font-size: 0.85rem;
   color: white;
 }
 

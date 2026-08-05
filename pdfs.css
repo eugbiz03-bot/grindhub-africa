@@ -23,6 +23,12 @@
   transition: 0.3s ease;
 }
 
+#search-input:focus {
+  outline: none;
+  box-shadow: 0 0 18px #00ffcc;
+  transform: scale(1.01);
+}
+
 #search-input::placeholder {
   color: #00ffcc;
   text-shadow: 0 0 4px #00ffcc;
@@ -97,12 +103,21 @@
   border-radius: 20px;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 
-.cat-tag:hover,
-.cat-tag.active {
+.cat-tag:hover {
   background: #256659;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 160, 0.15);
+}
+
+.cat-tag.active {
+  background: #00a651;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 166, 81, 0.5);
 }
 
 #no-results { 

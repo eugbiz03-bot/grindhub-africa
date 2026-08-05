@@ -1,28 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trading Journal</title>
-  <script src="journal-page.js" defer></script>
+  <meta name="robots" content="noindex, follow">
+  <title>Trading Journal | GrindHub Africa</title>
+  <meta name="description" content="Track your trades, review your win rate, and log your strategy and emotions with GrindHub Africa's free trading journal.">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/main.css">
   <link rel="stylesheet" href="journal-page.css">
+  <script src="journal-page.js" defer></script>
 </head>
-<body>
+<body class="preload">
 
-</head>
+  <header>
+    <nav class="navbar">
+      <div class="logo">GrindHub Africa</div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pdfs.html">Library</a></li>
+        <li><a href="/sound-lab/index.html">Sound Lab</a></li>
+        <li><a href="/tools.html">ToolBox</a></li>
+        <li><a href="/blog.html">Insights</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<body>
+  <div class="journal-container">
 
-  <h2>📊 Trading Journal</h2>
+    <h2>📊 Trading Journal</h2>
+    <p class="journal-note">Saved locally in this browser only — use "Export" regularly to back up your journal.</p>
 
-  <!-- FORM -->
+    <!-- FORM -->
     <input id="pair" placeholder="Pair (e.g Boom 1000)">
     <select id="type">
       <option>Buy</option>
       <option>Sell</option>
     </select>
     <input id="profit" type="number" placeholder="Profit/Loss ($)">
-    
+
     <input id="strategy" placeholder="Strategy (e.g Breakout)">
     <select id="emotion">
       <option value="">Emotion</option>
@@ -32,16 +51,23 @@
     </select>
 
     <input id="date" type="datetime-local" placeholder="datetime">
+    <textarea id="notes" placeholder="Notes (optional)" rows="2"></textarea>
 
     <input id="search" placeholder="Search by pair..." oninput="filterTrades()">
 
     <button onclick="addTrade()">Add Trade</button>
+    <button onclick="exportTrades()" class="export-btn">⬇️ Export Journal (JSON)</button>
 
-<!-- STATS -->
-<h3 id="stats"></h3>
+    <!-- STATS -->
+    <h3 id="stats"></h3>
+    <div id="emotionInsights" class="insights"></div>
 
-<!-- LIST -->
-<div id="tradeList"></div>
+    <!-- LIST -->
+    <div id="tradeList"></div>
+
+  </div>
+
+  <script src="/js/menu-tonggle.js"></script>
 
 </body>
 </html>

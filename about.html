@@ -11,6 +11,28 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
   <title>About - GrindHub Africa</title>
+
+  <!-- SEO Core -->
+  <meta name="description" content="Learn about GrindHub Africa — a free digital learning platform offering Forex trading education, programming resources, and self-development tools for African learners." />
+  <meta name="keywords" content="about grindhub africa, free education africa, forex learning platform, grindhub mission" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://grindhub-africa.netlify.app/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About GrindHub Africa" />
+  <meta property="og:description" content="Free Forex, tech, and self-development resources built for African learners." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://grindhub-africa.netlify.app/about.html" />
+  <meta property="og:image" content="https://grindhub-africa.netlify.app/img/preview.jpg" />
+  <meta property="og:site_name" content="GrindHub Africa" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About GrindHub Africa" />
+  <meta name="twitter:description" content="Free Forex, tech, and self-development resources built for African learners." />
+  <meta name="twitter:image" content="https://grindhub-africa.netlify.app/img/preview.jpg" />
+
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="about.css">
@@ -44,42 +66,23 @@
     <h1>About GrindHub Africa</h1>
     <h3>Welcome to GrindHub Africa!</h3>
     
-    <p>We provide free, high
-     -quality resources designed 
-     to help you build real-world 
-     skills and sustainable side 
-     hustle, including:</p>
+    <p>We provide free, high-quality resources designed to help you build real-world skills and sustainable side hustles, including:</p>
     
     <ul class="left">
-      <li>Carefully curated PDFs 
-          on Forex, trading 
-          strategies, business 
-          growth, and financial 
-          literacy</li>
-      <li>Insightful blog content   focused on mindset,
-          discipline, and smart 
-          execution</li>
-      <li>Original instrumental  
-          beats, created 
-          exclusively for the 
-          GrindHub Africa 
-          community</li>
+      <li>Carefully curated PDFs on Forex, trading strategies, business growth, and financial literacy</li>
+      <li>Insightful blog content focused on mindset, discipline, and smart execution</li>
+      <li>Original instrumental beats, created exclusively for the GrindHub Africa community</li>
     </ul>
-    <p>OUR MISSION IS SIMPLE: to  
-       empower African talent with
-       knowledge, tools, and 
-       motivation to win in the 
-       modern digital economy.</p>
+    <p>Our mission is simple: to empower African talent with knowledge, tools, and motivation to win in the modern digital economy.</p>
 
     <h2>Get in Touch</h2>
-    <p>Have a question, idea, or  
-       collaboration in mind?
-       Leave us a message below 
-       and we’ll get back to you 
-       as soon as possible.</p>
+    <p>Have a question, idea, or collaboration in mind? Leave us a message below and we'll get back to you as soon as possible.</p>
     <details class="form-collapse">
     <summary>CONTACT US</summary>
-   <form id="contact-form" action="https://formspree.io/f/mwvkdoag" method="POST">
+   <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+     <input type="hidden" name="access_key" value="3d7c63fd-c82e-4b1c-9e03-84d6fc6c8f8d">
+     <input type="hidden" name="subject" value="New message from GrindHub Africa contact form">
+
      <label for="name">Your Name:</label><br>
      <input type="text" name="name" id="name" placeholder="Name e.g Eugene" required><br><br>
 
@@ -120,7 +123,9 @@
       }
     });
 
-    if (response.ok) {
+    const data = await response.json();
+
+    if (data.success) {
       window.location.href = 'thank-you.html'; // redirect to your page
     } else {
       alert('Oops! There was a problem submitting your form.');

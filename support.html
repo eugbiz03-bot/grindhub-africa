@@ -3,19 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Eugene">
+  <meta name="author" content="Eugene">
   <meta name="publisher" content="Grindhub Africa">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  <title>SUPPORT GRINDHUB AFRICA</title>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <title>Support GrindHub Africa</title>
+  <meta name="description" content="Support GrindHub Africa's free learning platform with a small contribution — every bit helps keep resources free for African learners.">
+  <link rel="canonical" href="https://grindhub-africa.netlify.app/support.html" />
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/main.css">
   <link rel="stylesheet" href="support.css">
 </head>
 
-<body>
+<body class="preload">
+  <header>
+    <nav class="navbar">
+      <div class="logo">GrindHub Africa</div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pdfs.html">Library</a></li>
+        <li><a href="/sound-lab/index.html">Sound Lab</a></li>
+        <li><a href="/tools.html">ToolBox</a></li>
+        <li><a href="/blog.html">Insights</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <section class="support-section">
     <div class="support-container">
         <h1>Support the Platform ☕</h1>
@@ -47,9 +66,12 @@
                 <h2>🚀 Custom Support</h2>
                 <p class="price">Choose any amount</p>
                 <p>Every contribution pushes us forward.</p>
+                <input type="number" id="customAmount" placeholder="Enter amount (USD)" min="1" step="0.01" class="custom-input">
                 <div id="paypal-button-custom"></div>
             </div>
         </div>
+
+        <div id="support-message" class="support-message" style="display:none;"></div>
 
         <div class="where-goes">
             <h3>Where Your Support Goes</h3>
@@ -69,6 +91,13 @@
   <script src="https://www.paypal.com/sdk/js?client-id=AXrdCiUwPRw-PiiT_QF1a-TFVZAzFTu2njrVZSPBxw1gSg5RpnYfFSBz0j44L-vUgPW2wt7QiynNA43X&currency=USD"></script>
 
 <script>
+  function showSupportMessage(text) {
+    const box = document.getElementById("support-message");
+    box.textContent = text;
+    box.style.display = "block";
+    box.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
   // $1 Coffee
   paypal.Buttons({
     createOrder: function (data, actions) {
@@ -80,7 +109,7 @@
     },
     onApprove: function (data, actions) {
       return actions.order.capture().then(function () {
-        alert("Thank you for buying us a coffee ☕");
+        showSupportMessage("Thank you for buying us a coffee ☕");
       });
     }
   }).render('#paypal-button-1');
@@ -96,7 +125,7 @@
     },
     onApprove: function (data, actions) {
       return actions.order.capture().then(function () {
-        alert("Thank you for supporting GrindHub Africa 🚀");
+        showSupportMessage("Thank you for supporting GrindHub Africa 🚀");
       });
     }
   }).render('#paypal-button-2');
@@ -104,20 +133,23 @@
   // Custom Amount
   paypal.Buttons({
     createOrder: function (data, actions) {
-      const amount = prompt("Enter amount in USD:");
-      if (!amount || isNaN(amount)) {
-        alert("Invalid amount");
-        return;
+      const amountInput = document.getElementById("customAmount");
+      const amount = parseFloat(amountInput.value);
+
+      if (!amount || isNaN(amount) || amount <= 0) {
+        showSupportMessage("Please enter a valid amount greater than $0 before continuing.");
+        return Promise.reject(new Error("Invalid amount"));
       }
+
       return actions.order.create({
         purchase_units: [{
-          amount: { value: amount }
+          amount: { value: amount.toFixed(2) }
         }]
       });
     },
     onApprove: function (data, actions) {
       return actions.order.capture().then(function () {
-        alert("Massive thanks for your support ❤️");
+        showSupportMessage("Massive thanks for your support ❤️");
       });
     }
   }).render('#paypal-button-custom');
@@ -138,6 +170,8 @@ href="https://statcounter.com/" target="_blank"><img class="statcounter"
 src="https://c.statcounter.com/13207191/0/93e48821/0/" alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
+
+<script src="/js/menu-tonggle.js"></script>
 
 </body>
 </html>

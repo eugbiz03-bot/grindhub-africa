@@ -14,7 +14,7 @@ function calculateAll() {
   // 💰 Risk Amount
   const riskAmount = (balance * riskPercent)/100;
 
-  // 📉 Risk & Reward
+  // 📉 Risk & Reward (in price terms, used for RRR only)
   const risk = Math.abs(entry - sl);
   const reward = Math.abs(tp - entry);
 
@@ -22,12 +22,13 @@ function calculateAll() {
 
   const rrr = (reward/risk).toFixed(2);
 
-  // 📊 Lot Size
-  const lotSize = (riskAmount/risk).toFixed(2);
-
-  // ⚡ Pips
+  // ⚡ Pips (needed for correct lot sizing — matches the formula shown on the page)
   const multiplier = pairType==="JPY"?100:10000;
+  const riskPips = Math.abs(entry - sl) * multiplier;
   const pips = (Math.abs(tp-entry)*multiplier).toFixed(1);
+
+  // 📊 Lot Size = Risk Amount / Stop-Loss in pips (as documented on this page)
+  const lotSize = (riskAmount/riskPips).toFixed(2);
 
   // ⚠️ Trade Quality
   let quality="";
@@ -36,9 +37,9 @@ function calculateAll() {
   else if(rrr>=1) quality="Average ⚠️";
   else quality="Bad ❌";
 
-  // 💹 Potential Profit/Loss
-  const profit = reward * lotSize;
-  const loss = risk * lotSize;
+  // 💹 Potential Profit/Loss (pips × lot size, consistent units)
+  const profit = pips * lotSize;
+  const loss = riskPips * lotSize;
 
   document.getElementById('result').innerHTML=`
     💰 Risk Amount: $${riskAmount.toFixed(2)} <br>
@@ -48,6 +49,38 @@ function calculateAll() {
     💸 Potential Profit: $${profit.toFixed(2)} <br>
     💸 Potential Loss: $${loss.toFixed(2)}
   `;
+
+  // Store this calculation so "Log This Trade" can hand it to the journal
+  const pair = document.getElementById('tradePair').value.trim();
+  window.lastCalculation = {
+    pair: pair,
+    lotSize: lotSize,
+    rrr: rrr,
+    entry: entry,
+    sl: sl,
+    tp: tp,
+    quality: quality
+  };
+
+  const logBtn = document.getElementById('logTradeBtn');
+  if (logBtn) logBtn.style.display = pair ? 'block' : 'none';
+}
+
+function logToJournal() {
+  if (!window.lastCalculation || !window.lastCalculation.pair) {
+    alert("Enter a pair and calculate first.");
+    return;
+  }
+
+  const c = window.lastCalculation;
+  const notes = `Planned Lot Size: ${c.lotSize} | RRR: 1:${c.rrr} (${c.quality}) | Entry: ${c.entry} | SL: ${c.sl} | TP: ${c.tp}`;
+
+  localStorage.setItem('pendingTrade', JSON.stringify({
+    pair: c.pair,
+    notes: notes
+  }));
+
+  window.location.href = '/journal-page.html';
 }
 
 function calculateGrowth() {
@@ -93,24 +126,34 @@ function generateQuote() {
   function updateSession() {
   const now = new Date();
   const hour = now.getUTCHours(); // use UTC time
+  const day = now.getUTCDay(); // 0 = Sunday, 6 = Saturday
 
   let session = "";
 
-  if (hour >= 7 && hour < 9) {
-  session = "Tokyo + London Overlap 🔥";
-} else if (hour >= 13 && hour < 16) {
-  session = "London + New York Overlap 🔥";
-} else if (hour >= 13 && hour < 22) {
+  // Forex is closed on weekends (roughly Sat 22:00 UTC to Sun 22:00 UTC)
+  if (day === 6 || (day === 0 && hour < 22)) {
+    session = "Market Closed (Weekend) 🌙";
+  } else if (hour >= 8 && hour < 9) {
+    session = "Tokyo + London Overlap 🔥";
+  } else if (hour >= 13 && hour < 17) {
+    session = "London + New York Overlap 🔥";
+  } else if (hour >= 0 && hour < 9) {
+    session = "Tokyo Session 🇯🇵";
+  } else if (hour >= 8 && hour < 17) {
+    session = "London Session 🇬🇧";
+  } else if (hour >= 13 && hour < 22) {
     session = "New York Session 🇺🇸";
+  } else if (hour >= 21 || hour < 6) {
+    session = "Sydney Session 🇦🇺";
   } else {
-    session = "Market Closed 🌙";
+    session = "Between Sessions 🌐";
   }
 
   document.getElementById("sessionStatus").textContent = session;
 }
 
-// update every second
-setInterval(updateSession, 1000);
+// update every minute — session only changes hourly, no need for every second
+setInterval(updateSession, 60000);
 updateSession();
 
 function detectTrend() {

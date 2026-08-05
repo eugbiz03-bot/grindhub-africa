@@ -1,40 +1,110 @@
-body {
-      font-family: Arial;
-      padding: 15px;
-      background: #0f172a;
-      color: white;
-    }
+.journal-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+}
 
-    input, select, button {
-      padding: 10px;
-      margin: 5px 0;
-      width: 100%;
-      border-radius: 8px;
-      border: none;
-    }
+.journal-container h2 {
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
 
-    button {
-      background: #22c55e;
-      color: white;
-      font-weight: bold;
-    }
+.journal-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 10px;
-    }
+input, select, button {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
 
-    .profit {
-      color: #22c55e;
-    }
+input, select {
+  background: #173e2c;
+  color: #fff;
+  border: 1px solid #046F31;
+}
 
-    .loss {
-      color: #ef4444;
-    }
+input:focus, select:focus {
+  outline: none;
+  border-color: #00a651;
+}
 
-    .delete {
-      background: red;
-      margin-top: 5px;
-    }
+button {
+  background: #00a651;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #009140;
+  transform: translateY(-2px);
+}
+
+.export-btn {
+  background: #173e2c;
+  border: 1px solid #046F31;
+}
+
+.export-btn:hover {
+  background: rgba(0, 166, 81, 0.15);
+}
+
+.card {
+  background: #173e2c;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #046F31;
+}
+
+.profit {
+  color: #2de479;
+  font-weight: bold;
+}
+
+.loss {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.delete {
+  background: #b91c1c;
+  margin-top: 5px;
+}
+
+.delete:hover {
+  background: #991b1b;
+}
+
+textarea {
+  resize: vertical;
+  font-family: 'Poppins', sans-serif;
+}
+
+.insights {
+  max-width: 600px;
+  margin: 10px auto 0;
+}
+
+.insights h4 {
+  margin-bottom: 8px;
+  color: #2de479;
+}
+
+.insight-row {
+  background: #173e2c;
+  border: 1px solid #046F31;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}

@@ -3,12 +3,14 @@
 }
 
 .tool-intro {
-  background: #07132F;
+  background: #0e1b12;
   color: #fff;
   text-align: center;
   margin-bottom: 10px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #046F31;
 }
 
 .j-trader {
@@ -24,6 +26,12 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.J-btn:hover {
+  background: #2c8735;
+  transform: translateY(-2px);
 }
 
 .tool-card {
@@ -33,6 +41,12 @@
       margin-bottom: 2rem;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 255, 160, 0.1);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tool-card:hover {
+      box-shadow: 0 6px 16px rgba(0, 255, 160, 0.2);
+      transform: translateY(-2px);
 }
 
 .tool-card h3 {
@@ -49,10 +63,32 @@
       border-radius: 6px;
 }
 
+.tool-card input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #00a651;
+}
+
 .tool-card button {
       background-color: #00a651;
       color: white;
       font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.tool-card button:hover {
+      background-color: #009140;
+      transform: translateY(-2px);
+}
+
+.log-journal-btn {
+  background: linear-gradient(135deg, #ffdd55, #ffb700) !important;
+  color: #0a0a0a !important;
+}
+
+.log-journal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(255, 183, 0, 0.4);
 }
 
 input, select{

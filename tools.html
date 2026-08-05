@@ -83,6 +83,7 @@
   <h2>Free Trading Tools</h2>
 
   <input type="number" id="balance" placeholder="Account Balance ($)">
+  <input type="text" id="tradePair" placeholder="Pair (e.g EURUSD)">
   <input type="number" id="riskPercent" placeholder="Risk %">
 
   <input type="number" id="entry" placeholder="Entry Price">
@@ -97,6 +98,8 @@
   <button onclick="calculateAll()">Calculate</button>
 
   <div id="result"></div>
+
+  <button id="logTradeBtn" onclick="logToJournal()" style="display:none;" class="log-journal-btn">📓 Log This Trade</button>
 </div>
 
   <div class="tool-card">

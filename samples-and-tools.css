@@ -4,12 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0a0f0a;
-  color: #fff;
-}
+/* body font/background inherited from main.css */
 
 .header {
   text-align: center;
@@ -21,8 +16,8 @@ body {
 }
 
 h1 {
-  background: #575C59;
-  color: papayawhip;
+  background: #173e2c;
+  color: #fff;
   text-align: center;
   padding: 10px;
   width: 100vw;
@@ -31,11 +26,20 @@ h1 {
 }
 
 .tapBtn {
-  background: #748476;
+  background: var(--brand, #00a651);
   color: white;
   font-size: 20px;
   margin: 5px;
-  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.tapBtn:hover {
+  background: var(--brand-hover, #009140);
+  transform: translateY(-2px);
 }
 
 .section {
@@ -76,18 +80,20 @@ h2 {
   margin-bottom: 10px;
 }
 
-.btn {
+.download-btn {
   display: inline-block;
   margin-top: 10px;
   padding: 10px;
-  background: #00aaff;
+  background: var(--brand, #00a651);
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
-.btn:hover {
-  background: #008ecc;
+.download-btn:hover {
+  background: var(--brand-hover, #009140);
+  transform: translateY(-2px);
 }
 
 .featured {
@@ -97,26 +103,28 @@ h2 {
 .filter-bar {
   text-align: center;
   margin-bottom: 15px;
-  background: #06740D;
+  background: #0e1b12;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-bottom: 2rem;
-  border-top:1px solid #09B335;
-  border-bottom:1px solid #09B335;
+  border-top: 1px solid #046F31;
+  border-bottom: 1px solid #046F31;
 }
 
 .filter-bar button {
   margin: 5px;
   padding: 8px 12px;
   border: none;
-  background: #333;
+  background: #173e2c;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
 .filter-bar button:hover {
-  background: #555;
+  background: var(--brand, #00a651);
+  transform: translateY(-2px);
 }
 
 .sample-card {

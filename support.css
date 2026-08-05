@@ -6,7 +6,7 @@ body {
     background: #0d0d0d;
     color: white;
     padding: 40px 20px;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .support-container {
@@ -100,6 +100,36 @@ body {
     margin-top: 30px;
     font-size: 14px;
     opacity: 0.6;
+}
+
+/* Custom amount input */
+.custom-input {
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.custom-input:focus {
+    outline: none;
+    border-color: #ffd700;
+}
+
+/* Success / validation message */
+.support-message {
+    max-width: 500px;
+    margin: 25px auto 0;
+    background: #1a1a1a;
+    border: 1px solid #ffd700;
+    color: #ffd700;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 15px;
 }
 
 /* MOBILE FIX */
